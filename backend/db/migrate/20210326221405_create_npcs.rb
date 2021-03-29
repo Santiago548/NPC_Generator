@@ -2,6 +2,7 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
   def change
     create_table :npcs do |t|
       t.string :name
+      t.string :race
       t.string :sex
       t.string :alignment
       t.string :description
@@ -10,8 +11,7 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.string :constitution
       t.string :wisdom
       t.string :charisma
-      t.string :id
-      t.string :encounter_id
+      t.belongs_to :encounter, null: false, foreign_key: true
 
       t.timestamps
     end
