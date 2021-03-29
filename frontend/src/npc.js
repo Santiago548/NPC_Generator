@@ -14,8 +14,28 @@ class Npc{
         this.charisma = charisma
         this.id = id
         this.encounter_id = encounter_id
+        this.element = document.createElement('div')
+        this.element.id = `npc-${this.id}`
 
         Npc.all.push(this)
     }
+
+    get npcList(){
+        return document.getElementById('npc-list')
+    }
     
+    static findById(id){
+        return Npc.all.find(npc => npc.id == id)
+    }
+
+    addEventListeners(){
+        this.element.addEventListener('click', this.handleListClick)
+    }
+
+    attachToDom(){
+        this.npcList.append(render())
+        this.addEventListeners()
+    }
+
+
 }
