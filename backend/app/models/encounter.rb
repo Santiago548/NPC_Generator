@@ -1,3 +1,3 @@
 class Encounter < ApplicationRecord
-    has_many :items
+    has_many :npcs
 end
