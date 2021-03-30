@@ -4,7 +4,7 @@ class NpcAdapter{
         this.baseUrl = 'http://localhost:3000/npcs'
     }
 
-    fetchItems(){
+    fetchNpcs(){
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
