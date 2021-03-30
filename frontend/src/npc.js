@@ -51,7 +51,6 @@ class Npc{
         $<span class="npc-charisma>${this.charisma}</span>
         </li>
         <button class="delete" data-id="${this.id}">Delete</button>
-        <button class="update" data-id="${this.id}">Update</button>
         `
         return this.element
     }
