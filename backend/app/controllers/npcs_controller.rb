@@ -1,7 +1,7 @@
 class NpcsController < ApplicationController
     def index
         npcs = Npc.all
-        render json: NpcSerializer.new(npc)
+        render json: NpcSerializer.new(npcs)
     end
 
     def show
