@@ -1,0 +1,1 @@
+const npcAdapter = new NpcAdapter
