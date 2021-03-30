@@ -8,6 +8,7 @@
     <body>
         <h1>NPC Generator</h1>
             <div id="form-container">
+                <form id="npc-form">
                 <h2>Create a New NPC</h2>
                 <label for="npc-name">Name:</label>
                 <input type="text" name="name" id="npc-name"><br><br>
@@ -20,34 +21,34 @@
                     <option value="Gnome">Gnome</option>
                     <option value="Half-Elf">Half-Elf</option>
                     <option value="Halfling">Halfling</option>
-                    <option value="Half-Orc">Half-Orc</option>
+                    <!-- <option value="Half-Orc">Half-Orc</option> -->
                     <option value="Human">Human</option>
                     <option value="Tiefling">Tiefling</option>
-                    <option value="Orc of Exandria">Orc of Exandria</option>
+                    <!-- <option value="Orc of Exandria">Orc of Exandria</option>
                     <option value="Leonin">Leonin</option>
-                    <option value="Satyr">Satyr</option>
-                    <option value="Genasi">Genasi</option>
+                    <option value="Satyr">Satyr</option> -->
+                    <!-- <option value="Genasi">Genasi</option> -->
                     <option value="Goliath">Goliath</option>
-                    <option value="Aasimar">Aasimar</option>
-                    <option value="Bugbear">Bugbear</option>
+                    <!-- <option value="Aasimar">Aasimar</option>
+                    <option value="Bugbear">Bugbear</option> -->
                     <option value="Firbolg">Firbolg</option>
                     <option value="Goblin">Goblin</option>
-                    <option value="Hobgoblin">Hobgoblin</option>
-                    <option value="Kenku">Kenku</option>
+                    <!-- <option value="Hobgoblin">Hobgoblin</option> -->
+                    <!-- <option value="Kenku">Kenku</option>
                     <option value="Kobold">Kobold</option>
-                    <option value="Lizardfolk">Lizardfolk</option>
+                    <option value="Lizardfolk">Lizardfolk</option> -->
                     <option value="Orc">Orc</option>
                     <option value="Tabaxi">Tabaxi</option>
-                    <option value="Triton">Triton</option>
+                    <!-- <option value="Triton">Triton</option>
                     <option value="Yuan-ti Pureblood">Yuan-ti Pureblood</option>
                     <option value="Feral Tiefling">Feral Tiefling</option>
                     <option value="Tortle">Tortle</option>
                     <option value="Changeling">Changeling</option>
                     <option value="Kalashtar">Kalashtar</option>
                     <option value="Orc of Eberron">Orc of Eberron</option>
-                    <option value="Shifter">Shifter</option>
+                    <option value="Shifter">Shifter</option> -->
                     <option value="Warforged">Warforged</option>
-                    <option value="Gith">Gith</option>
+                    <!-- <option value="Gith">Gith</option>
                     <option value="Centaur">Centaur</option>
                     <option value="Loxodon">Loxodon</option>
                     <option value="Minotaur">Minotaur</option>
@@ -55,7 +56,7 @@
                     <option value="Vedalken">Vedalken</option>
                     <option value="Verdan">Verdan</option>
                     <option value="Locathah">Locathah</option>
-                    <option value="Grung">Grung</option>
+                    <option value="Grung">Grung</option> -->
                 </select><br><br>
                 <label for="npc-sex">Sex:</label>
                 <select type='text' name='sex' id='npc-sex'>
@@ -86,7 +87,7 @@
                 <h3>Ability Scores:</h3>
                 <label for="npc-strength">Strength:</label>
                 <select type='number' name='strength' id='npc-strength'>
-                    <option value="Random">Random</option>
+                    <option value="0">Random</option>
                     <option value="1"> +1 / (12)</option>
                     <option value="2"> +2 / (14)</option>
                     <option value="3"> +3 / (16)</option>
@@ -98,7 +99,7 @@
 
                 <label for="npc-dexterity">Dexterity:</label>
                 <select type='number' name='dexterity' id='npc-dexterity'>
-                    <option value="Random">Random</option>
+                    <option value="0">Random</option>
                     <option value="1"> +1 / (12)</option>
                     <option value="2"> +2 / (14)</option>
                     <option value="3"> +3 / (16)</option>
@@ -108,9 +109,9 @@
                 </select>
                 <br><br>
 
-                <label for="npc-constitution">constitution:</label>
+                <label for="npc-constitution">Constitution:</label>
                 <select type='number' name='constitution' id='npc-constitution'>
-                    <option value="Random">Random</option>
+                    <option value="0">Random</option>
                     <option value="1"> +1 / (12)</option>
                     <option value="2"> +2 / (14)</option>
                     <option value="3"> +3 / (16)</option>
@@ -122,7 +123,7 @@
 
                 <label for="npc-wisdom">Wisdom:</label>
                 <select type='number' name='wisdom' id='npc-wisdom'>
-                    <option value="Random">Random</option>
+                    <option value="0">Random</option>
                     <option value="1"> +1 / (12)</option>
                     <option value="2"> +2 / (14)</option>
                     <option value="3"> +3 / (16)</option>
@@ -134,7 +135,7 @@
 
                 <label for="npc-charisma">Charisma:</label>
                 <select type='number' name='charisma' id='npc-charisma'>
-                    <option value="Random">Random</option>
+                    <option value="0">Random</option>
                     <option value="1"> +1 / (12)</option>
                     <option value="2"> +2 / (14)</option>
                     <option value="3"> +3 / (16)</option>
@@ -143,6 +144,8 @@
                     <option value="6"> +6 / (22)</option>
                 </select>
                 <br><br>
+                <input type="submit" value="Create NPC">
+                </form>
             </div>
         <script src="index.js" type="text/javascript"></script>
 
