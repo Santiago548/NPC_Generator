@@ -1,10 +1,11 @@
 //post, patch, delete
-class NpcAdapter{
+class NpcsAdapter{
     constructor(){
         this.baseUrl = 'http://localhost:3000/npcs'
     }
 
     fetchNpcs(){
+        if(Npc.exists) {
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
@@ -13,6 +14,10 @@ class NpcAdapter{
                 npc.attachToDom(el)
             })
         })
+        } else {
+            console.log('there are no NPCs')
+        }
+
     }
 
     handleFormSubmit = (e) => {
@@ -39,7 +44,7 @@ class NpcAdapter{
             charisma
         }
 
-        let configNpc =  {
+        let configNpc = {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -54,6 +59,7 @@ class NpcAdapter{
             let npc = new Npc(json.data.attributes)
             npc.attachToDom()
         })
+
     }
 
     sendPatchRequest(npcId){
