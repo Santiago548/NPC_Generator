@@ -1,12 +1,13 @@
 class Npc{
     static all = []
 
-    constructor({name, race, sex, alignment, description, strength, dexterity, constitution, wisdom, charisma, id, encounter_id}){
+    constructor({name, race, sex, alignment, melee, ranged, strength, dexterity, constitution, wisdom, charisma, id, encounter_id}){
         this.name = name
         this.race = race
         this.sex = sex
         this.alignment = alignment
-        this.description = description
+        this.melee = melee
+        this.ranged = ranged
         this.strength = strength
         this.dexterity = dexterity
         this.constitution = constitution
@@ -40,15 +41,17 @@ class Npc{
     render(){
         this.element.innerHTML = `
         <li>
-        <span class="npc-name">${this.name}</span>
-        <span class="npc-race">${this.race}</span>
-        <span class="npc-sex">${this.sex}</span>
-        <span class="npc-alignment">${this.alignment}</span>
-        <span class="npc-strength">${this.strength}</span>
-        <span class="npc-dexterity">${this.dexterity}</span>
-        <span class="npc-constitution">${this.constitution}</span>
-        <span class="npc-wisdom">${this.wisdom}</span>
-        <span class="npc-charisma">${this.charisma}</span>
+        <span class="name">${this.name}</span>
+        <span class="race">${this.race}</span>
+        <span class="sex">${this.sex}</span>
+        <span class="alignment">${this.alignment}</span>
+        <span class="melee">${this.melee}</span>
+        <span class="ranged">${this.ranged}</span>
+        <span class="strength">${this.strength}</span>
+        <span class="dexterity">${this.dexterity}</span>
+        <span class="constitution">${this.constitution}</span>
+        <span class="wisdom">${this.wisdom}</span>
+        <span class="charisma">${this.charisma}</span>
         </li>
         <button class="delete" data-id="${this.id}">Delete</button>
         `

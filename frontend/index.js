@@ -1,7 +1,7 @@
 const npcForm = document.getElementById('npc-form')
 const encounterForm = document.getElementById('encounter-form')
-const npcAdapter = new NpcAdapter
-const encounterAdapter = new EncounterAdapter
+const npcAdapter = new NpcsAdapter
+const encounterAdapter = new EncountersAdapter
 
 document.addEventListener('DOMContentLoaded', () => {
     npcAdapter.fetchNpcs()

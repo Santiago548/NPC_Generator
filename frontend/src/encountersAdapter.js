@@ -1,5 +1,5 @@
 //post, patch, delete
-class EncounterAdapter{
+class EncountersAdapter{
     constructor(){
         this.baseUrl = 'http://localhost:3000/encounters'
     }
