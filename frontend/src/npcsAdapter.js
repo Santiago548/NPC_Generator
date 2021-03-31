@@ -5,7 +5,6 @@ class NpcsAdapter{
     }
 
     fetchNpcs(){
-        if(Npc.exists) {
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
@@ -14,9 +13,7 @@ class NpcsAdapter{
                 npc.attachToDom(el)
             })
         })
-        } else {
-            console.log('there are no NPCs')
-        }
+        
 
     }
 
@@ -115,7 +112,7 @@ class NpcsAdapter{
 
     deleteNpc(id){
         let configNpc = {
-            method: "DELETE",
+            method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json"
@@ -127,7 +124,7 @@ class NpcsAdapter{
         .then(json => {
             alert(json.message)
         })
-        Npc.all = Npc.all.filter(i => i.id !=id)
+        Npc.all = Npc.all.filter(i => i.id != id)
         
         let npc = document.getElementById(`npc-${id}`)
         npc.remove()
