@@ -5,12 +5,11 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.string :race
       t.string :sex
       t.string :alignment
-      t.string :description
-      t.string :strength
-      t.string :dexterity
-      t.string :constitution
-      t.string :wisdom
-      t.string :charisma
+      t.integer :strength
+      t.integer :dexterity
+      t.integer :constitution
+      t.integer :wisdom
+      t.integer :charisma
       t.belongs_to :encounter, null: false, foreign_key: true
 
       t.timestamps

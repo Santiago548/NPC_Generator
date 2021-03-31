@@ -34,6 +34,6 @@ class NpcsController < ApplicationController
     private
 
     def npc_params
-        params.require(:npc).permit(:name, :race, :sex, :alignment, :description, :strength, :dexterity, :constitution, :wisdome, :charisma, :id, :encounter_id)
+        params.require(:npc).permit(:name, :race, :sex, :alignment, :strength, :dexterity, :constitution, :wisdome, :charisma, :id, :encounter_id)
     end
 end
