@@ -3,7 +3,6 @@ class EncountersController < ApplicationController
     def index
         encounters = Encounter.all
         render json: EncounterSerializer.new(encounters, {include: [:npcs]}) 
-        # , (include: [:npcs])
     end
 
     def show
