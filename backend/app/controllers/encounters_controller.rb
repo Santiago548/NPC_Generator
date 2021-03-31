@@ -2,7 +2,8 @@ class EncountersController < ApplicationController
 
     def index
         encounters = Encounter.all
-        render json: EncounterSerializer.new(encounters, (include: [:npcs]))
+        render json: EncounterSerializer.new(encounters, {include: [:npcs]}) 
+        # , (include: [:npcs])
     end
 
     def show
@@ -23,7 +24,7 @@ class EncountersController < ApplicationController
     def destroy
         encounter = Encounter.find(params[:id])
         encounter.destroy
-        render json {message: `#{encounter.name} has been deleted`}
+        render json: {message: `#{encounter.name} has been deleted`}
     end
 
     def update
