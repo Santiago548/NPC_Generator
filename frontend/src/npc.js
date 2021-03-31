@@ -1,7 +1,7 @@
 class Npc{
     static all = []
 
-    constructor({name, race, sex, alignment, melee, ranged, strength, dexterity, constitution, wisdom, charisma, id, }){ // encounter_id
+    constructor({name, race, sex, alignment, melee, ranged, strength, dexterity, constitution, wisdom, charisma, id }){ // encounter_id
         this.name = name
         this.race = race
         this.sex = sex
