@@ -26,6 +26,8 @@ class NpcsAdapter{
         const race = document.getElementById('npc-race').value
         const sex = document.getElementById('npc-sex').value
         const alignment = document.getElementById('npc-alignment').value
+        const melee = document.getElementById('npc-melee').value
+        const ranged = document.getElementById('npc-ranged').value
         const strength = document.getElementById('npc-strength').value
         const dexterity = document.getElementById('npc-dexterity').value
         const constitution = document.getElementById('npc-constitution').value
@@ -37,6 +39,8 @@ class NpcsAdapter{
             race,
             sex,
             alignment,
+            melee,
+            ranged,
             strength,
             dexterity,
             constitution,
@@ -67,6 +71,8 @@ class NpcsAdapter{
         const race = document.getElementById(`update-race-${npcId}`).value
         const sex = document.getElementById(`update-sex-${npcId}`).value
         const alignment = document.getElementById(`update-alignment-${npcId}`).value
+        const melee = document.getElementById(`update-melee-${npcId}`).value
+        const ranged = document.getElementById(`update-ranged-${npcId}`).value
         const strength = document.getElementById(`update-strength-${npcId}`).value
         const dexterity = document.getElementById(`update-dexterity-${npcId}`).value
         const constitution = document.getElementById(`update-constitution-${npcId}`).value
@@ -78,6 +84,8 @@ class NpcsAdapter{
             race,
             sex,
             alignment,
+            melee,
+            ranged,
             strength,
             dexterity,
             constitution,
