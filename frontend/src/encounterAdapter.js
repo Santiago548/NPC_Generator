@@ -1,15 +1,15 @@
 //post, patch, delete
-class encounterAdapter{
+class EncounterAdapter{
     constructor(){
         this.baseUrl = 'http://localhost:3000/encounters'
     }
 
-    fetchencounters(){
+    fetchEncounters(){
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
             response.data.forEach(el => {
-                let encounter = new encounter(el.attributes)
+                let encounter = new Encounter(el.attributes)
                 encounter.attachToDom(el)
             })
         })
@@ -19,7 +19,7 @@ class encounterAdapter{
         e.preventDefault()
         const name = document.getElementById('encounter-name').value
         const description = document.getElementById('encounter-description').value
-        const environment = document.getElementById('encounter environment').value
+        const environment = document.getElementById('encounter-environment').value
         
         let newEncounter = {
             name,
@@ -44,7 +44,7 @@ class encounterAdapter{
         })
     }
 
-    deleteencounter(id){
+    deleteEncounter(id){
         let configEncounter = {
             method: "DELETE",
             headers: {
@@ -59,6 +59,7 @@ class encounterAdapter{
             alert(json.message)
         })
         Encounter.all = Encounter.all.filter(i => i.id !=id)
+        
         let encounter = document.getElementById(`encounter-${id}`)
         encounter.remove()
     }

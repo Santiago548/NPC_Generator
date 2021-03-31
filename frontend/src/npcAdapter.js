@@ -56,6 +56,49 @@ class NpcAdapter{
         })
     }
 
+    sendPatchRequest(npcId){
+        const name = document.getElementById(`update-name-${npcId}`).value
+        const race = document.getElementById(`update-race-${npcId}`).value
+        const sex = document.getElementById(`update-sex-${npcId}`).value
+        const alignment = document.getElementById(`update-alignment-${npcId}`).value
+        const strength = document.getElementById(`update-strength-${npcId}`).value
+        const dexterity = document.getElementById(`update-dexterity-${npcId}`).value
+        const constitution = document.getElementById(`update-constitution-${npcId}`).value
+        const wisdom = document.getElementById(`update-wisdom-${npcId}`).value
+        const charisma = document.getElementById(`update-charisma-${npcId}`).value
+    
+        let newNpc = {
+            name,
+            race,
+            sex,
+            alignment,
+            strength,
+            dexterity,
+            constitution,
+            wisdom,
+            charisma
+        }
+
+        let configNpc = {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(newNpc)
+        }
+
+        fetch(this.baseUrl + `/${npcId}`, configNpc)
+        .then(res => res.json())
+        .then(res => {
+            let npc = Npc.all.find(i => i.id == res.data.attributes.id)
+            npc.updateItemOnDom(res.data.attributes)
+
+            let form = document.getElementById(`update-form-${npcId}`)
+            form.remove()
+        })
+    }
+
     deleteNpc(id){
         let configNpc = {
             method: "DELETE",
@@ -71,6 +114,7 @@ class NpcAdapter{
             alert(json.message)
         })
         Npc.all = Npc.all.filter(i => i.id !=id)
+        
         let npc = document.getElementById(`npc-${id}`)
         npc.remove()
     }
