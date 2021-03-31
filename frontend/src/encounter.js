@@ -1,7 +1,7 @@
 class Encounter{
     static all = []
 
-    constructor({name, description, environment, id, environment_id}){
+    constructor({name, description, environment, id}){
         this.name = name
         this.description = description
         this.environment = environment
@@ -13,7 +13,7 @@ class Encounter{
         Encounter.all.push(this)
     }
 
-    get environmentList(){
+    get encounterList(){
         return document.getElementById('encounter-list')
     }
     

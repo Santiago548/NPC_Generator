@@ -41,17 +41,17 @@ class Npc{
     render(){
         this.element.innerHTML = `
         <li>
-        <span class="name">${this.name}</span>
-        <span class="race">${this.race}</span>
+        <span class="name">${this.name}</span><br>
+        The <span class="alignment">${this.alignment}</span>
         <span class="sex">${this.sex}</span>
-        <span class="alignment">${this.alignment}</span>
-        <span class="melee">${this.melee}</span>
-        <span class="ranged">${this.ranged}</span>
-        <span class="strength">${this.strength}</span>
-        <span class="dexterity">${this.dexterity}</span>
-        <span class="constitution">${this.constitution}</span>
-        <span class="wisdom">${this.wisdom}</span>
-        <span class="charisma">${this.charisma}</span>
+        <span class="race">${this.race}</span><br>
+        Equipped with a <span class="melee">${this.melee}</span>
+        and <span class="ranged">${this.ranged}</span><br>
+        Strength +<span class="strength">${this.strength}</span><br>
+        Dexterity +<span class="dexterity">${this.dexterity}</span><br>
+        Constitution +<span class="constitution">${this.constitution}</span><br>
+        Wisdom +<span class="wisdom">${this.wisdom}</span><br>
+        Charisma +<span class="charisma">${this.charisma}</span>
         </li>
         <button class="delete" data-id="${this.id}">Delete</button>
         `
@@ -59,7 +59,7 @@ class Npc{
     }
 
    handleListClick = (e) => {
-       if(e.target.className === "delete"){
+       if (e.target.className === "delete"){
            let id = e.target.dataset.id
            npcAdapter.deleteNpc(id)
        }

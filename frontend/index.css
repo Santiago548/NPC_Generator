@@ -1,5 +1,10 @@
   
-.npccolumn {
+.npccolumnform {
+    float: left;
+    width: 50%;
+  }
+
+  .npccolumn {
     float: right;
     width: 50%;
   }

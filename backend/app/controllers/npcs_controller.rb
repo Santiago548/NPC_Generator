@@ -25,16 +25,15 @@ class NpcsController < ApplicationController
         render json: {message: `#{npc.name} has been deleted!`}
     end
 
-    def update
-        npc = Npc.find(params[:id])
-        npc.update(npc_params)
-        render json: NpcSerializer.new(npc)
-    end
+    # def update
+    #     npc = Npc.find(params[:id])
+    #     npc.update(npc_params)
+    #     render json: NpcSerializer.new(npc)
+    # end
 
     private
 
     def npc_params
-        params.require(:npc).permit(:name, :race, :sex, :alignment, :melee, :ranged, :strength, :dexterity, :constitution, :wisdom, :charisma, :id) 
-        # encounter_id
+        params.require(:npc).permit(:name, :race, :sex, :alignment, :melee, :ranged, :strength, :dexterity, :constitution, :wisdom, :charisma) 
     end
 end
