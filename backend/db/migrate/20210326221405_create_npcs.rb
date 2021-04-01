@@ -7,6 +7,8 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.string :alignment
       t.string :melee
       t.string :ranged
+      t.integer :health
+      t.string :armor
       t.integer :strength
       t.integer :dexterity
       t.integer :constitution

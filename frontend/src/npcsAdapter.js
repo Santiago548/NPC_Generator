@@ -25,6 +25,8 @@ class NpcsAdapter{
         const alignment = document.getElementById('npc-alignment').value
         const melee = document.getElementById('npc-melee').value
         const ranged = document.getElementById('npc-ranged').value
+        const health = document.getElementById('npc-health').value
+        const armor = document.getElementById('npc-armor').value
         const strength = document.getElementById('npc-strength').value
         const dexterity = document.getElementById('npc-dexterity').value
         const constitution = document.getElementById('npc-constitution').value
@@ -38,6 +40,8 @@ class NpcsAdapter{
             alignment,
             melee,
             ranged,
+            health,
+            armor,
             strength,
             dexterity,
             constitution,

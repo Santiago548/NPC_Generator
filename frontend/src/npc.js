@@ -1,13 +1,15 @@
 class Npc{
     static all = []
 
-    constructor({name, race, sex, alignment, melee, ranged, strength, dexterity, constitution, wisdom, charisma, id }){ // encounter_id
+    constructor({name, race, sex, alignment, melee, ranged, health, armor, strength, dexterity, constitution, wisdom, charisma, id }){ // encounter_id
         this.name = name
         this.race = race
         this.sex = sex
         this.alignment = alignment
         this.melee = melee
         this.ranged = ranged
+        this.health = health
+        this.armor = armor
         this.strength = strength
         this.dexterity = dexterity
         this.constitution = constitution
@@ -45,8 +47,13 @@ class Npc{
         The <span class="alignment">${this.alignment}</span>
         <span class="sex">${this.sex}</span>
         <span class="race">${this.race}</span><br>
-        Equipped with a <span class="melee">${this.melee}</span>
-        and <span class="ranged">${this.ranged}</span><br>
+        <br>
+        HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
+        ARMOR: <span class="health">${this.armor + " " + this.dexterity }</span><br><br>
+        <b>WEAPONS:</b><br>
+        MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
+        RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
+        <b>ABILITY SCORES:</b><br>
         Strength +<span class="strength">${this.strength}</span><br>
         Dexterity +<span class="dexterity">${this.dexterity}</span><br>
         Constitution +<span class="constitution">${this.constitution}</span><br>

@@ -96,34 +96,59 @@
                 </select>
                 <br><br>
                 
+                <h3>Equipment and Health:</h3>
+
+                <label for="npc-health">Health:</label>
+                <select type='integer' name='health' id='npc-health'>
+                    <option value=10>10 hp</option>
+                    <option value=15>15 hp</option>
+                    <option value=20>20 hp</option>
+                </select><br><br>
+                <label for="npc-armor">Armor Class:</label>
+                <select type='integer' name='armor' id='npc-armor'>
+                    <option value="Padded">Padded</option> <!-- 11 + dex -->
+                    <option value="Leather">Leather</option><!-- 11 + dex -->
+                    <option value="Studded Leather">Studded Leather</option><!-- 12 + dex -->
+                    <option value="Hide">Hide</option> <!-- 12 + dex(max2) -->
+                    <option value="Chain Shirt">Chain Shirt</option> <!-- 13 + dex(max2) -->
+                    <option value="Scale Mail">Scale Mail</option> <!-- 14 + dex(max2) -->
+                    <option value="Spiked Armor">Spiked Armor</option> <!-- 14 + dex(max2) -->
+                    <option value="Breatplate">Breatplate</option> <!-- 14 + dex(max2) -->
+                    <option value="halfplate">Halfplate</option> <!-- 15 + dex(max 2) -->
+                    <option value="Ring Mail">Ring Mail</option> <!-- 14 -->
+                    <option value="Chain Mail">Chain Mail</option> <!-- 16 -->
+                    <option value="Splint">Splint</option><!-- 17  -->
+                    <option value="Plate">Plate</option> <!-- 18  -->
+                    <!-- 12 + dex -->
+                </select><br><br>
                 <label for="npc-melee">Melee Weapon:</label>
                 <select type='text' name='melee' id='npc-melee'>
                     <!-- <option value="Random">Random</option> -->
-                    <option value="Battle Axe">Battle Axe</option><!-- 1D8 Slashing -->
-                    <option value="Club">Club</option><!-- 1D4 Bludgeoning -->
-                    <option value="Dagger">Dagger</option><!-- 1D4 piercing -->
-                    <option value="Greataxe">Greataxe</option><!-- 1D12 Slashing -->
-                    <option value="Great Club">Great Club</option><!-- 1D8 Slashing -->
-                    <option value="Hand Axe">Hand Axe</option><!-- 1D6 Slashing -->
-                    <option value="Long Sword">Long Sword</option><!-- 1D8 Slashing -->
-                    <option value="Quarterstaff">Quarterstaff</option>
-                    <option value="Rapier">Rapier</option><!-- 1D8 Piercing -->
-                    <option value="Scimitar">Scimitar</option><!-- 1D6 Slashing -->
-                    <option value="Short Sword">Short Sword</option><!-- 1D6 Piercing -->
+                    <option value="Battle Axe [1d8 Slashing]">Battle Axe</option><!-- 1D8 Slashing -->
+                    <option value="Club [1d4 Bludgeoning]">Club</option><!-- 1D4 Bludgeoning -->
+                    <option value="Dagger [1d4 piercing]">Dagger</option><!--  [1D4 piercing] -->
+                    <option value="Greataxe [1d12 Slashing]">Greataxe</option><!-- 1D12 Slashing -->
+                    <option value="Great Club [1d8 Slashing]">Great Club</option><!-- 1D8 Slashing -->
+                    <option value="Hand Axe [1d6 Slashing]">Hand Axe</option><!-- 1D6 Slashing -->
+                    <option value="Long Sword [1d8 Slashing]">Long Sword</option><!-- 1D8 Slashing -->
+                    <option value="Quarterstaff [1d6 Bludgeoning]">Quarterstaff</option>
+                    <option value="Rapier [1d8 Piercing]">Rapier</option><!-- 1D8 Piercing -->
+                    <option value="Scimitar [1d6 Slashing]">Scimitar</option><!-- 1D6 Slashing -->
+                    <option value="Short Sword [1d6 Slashing]">Short Sword</option><!-- 1D6 Piercing -->
                 </select>
                 <br><br>
 
                 <label for="npc-ranged">Ranged Weapon:</label>
                 <select type='text' name='melee' id='npc-ranged'>
                     <!-- <option value="Random">Random</option> -->
-                    <option value="Blowgun">Blowgun</option><!-- 1 piercing range(25/100) -->
-                    <option value="Light Crossbow "> Light Crossbow</option><!-- 1D8 Piercing range(80/320) -->
-                    <option value="Dart">Dart</option><!-- 1D4 Piercing range(20/60) -->
-                    <option value="Shortbow">Shortbow</option><!-- 1D6 piercing range(80/320) -->
-                    <option value="Sling">Sling</option><!-- 1D4 piercing range(30/120) -->
-                    <option value="Hand Crossbow">Hand Crossbow</option><!-- 1D6 Piercing range(30/120) -->
-                    <option value="Heavy Crossbow">Heavy Crossbow</option><!-- 1D10 piercing range(100/400) -->
-                    <option value="Longbow">Longbow</option><!-- 1D8 piercing range(150/600) -->
+                    <option value="Blowgun [1 Piercing range (25/100)]">Blowgun</option><!-- 1 piercing range(25/100) -->
+                    <option value="Light Crossbow [1D8 Piercing range(80/320)] "> Light Crossbow</option><!-- 1D8 Piercing range(80/320) -->
+                    <option value="Dart [1D4 Piercing range(20/60)]">Dart</option><!-- 1D4 Piercing range(20/60) -->
+                    <option value="Shortbow [1D6 piercing range(80/320)]">Shortbow</option><!-- 1D6 piercing range(80/320) -->
+                    <option value="Sling [1D4 piercing range(30/120) ]">Sling</option><!-- 1D4 piercing range(30/120) -->
+                    <option value="Hand Crossbow [1D6 Piercing range(30/120)]">Hand Crossbow</option><!-- 1D6 Piercing range(30/120) -->
+                    <option value="Heavy Crossbow [1D10 piercing range(100/400)]">Heavy Crossbow</option><!-- 1D10 piercing range(100/400) -->
+                    <option value="Longbow [1D8 piercing range(150/600)]">Longbow</option><!-- 1D8 piercing range(150/600) -->
                 </select>
                 <br><br>
 

@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2021_03_26_221405) do
     t.string "alignment"
     t.string "melee"
     t.string "ranged"
+    t.integer "health"
+    t.string "armor"
     t.integer "strength"
     t.integer "dexterity"
     t.integer "constitution"
