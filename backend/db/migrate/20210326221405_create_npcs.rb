@@ -14,7 +14,8 @@ class CreateNpcs < ActiveRecord::Migration[6.1]
       t.integer :constitution
       t.integer :wisdom
       t.integer :charisma
-
+      t.belongs_to :encounter, null: false, foreign_key: true
+      
       t.timestamps
     end
   end
