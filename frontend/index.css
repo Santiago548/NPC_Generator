@@ -1,12 +1,12 @@
   
 .npccolumnform {
     float: left;
-    width: 50%;
+    width: 25%;
   }
 
   .npccolumn {
     float: right;
-    width: 50%;
+    width: 25%;
   }
 
   /* Clear floats after the columns */
