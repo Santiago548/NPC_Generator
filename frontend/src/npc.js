@@ -49,7 +49,7 @@ class Npc{
         <span class="race">${this.race}</span><br>
         <br>
         HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
-        ARMOR: <span class="health">${this.armor + " " + this.dexterity }</span><br><br>
+        ARMOR: <span class="health">${this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
         <b>WEAPONS:</b><br>
         MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
         RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
@@ -64,6 +64,7 @@ class Npc{
         `
         return this.element
     }
+
 
    handleListClick = (e) => {
        if (e.target.className === "delete"){
