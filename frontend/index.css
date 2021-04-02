@@ -1,5 +1,32 @@
-  
-.npccolumnform {
+.item-z {
+  grid-area: header
+}
+.item-a {
+  grid-area: encounter;
+}
+.item-b {
+  grid-area: npcform;
+}
+.item-c {
+  grid-area: npccollection;
+}
+.item-d {
+  grid-area: npcshow;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header header"
+  "encounter npcform npccollection npcshow"
+  "encounter npcform npccollection npcshow"
+  "encounter npcform npccollection npcshow";
+}
+
+/* .npccolumnform {
     float: left;
     width: 25%;
   }
@@ -8,16 +35,8 @@
     float: right;
     width: 25%;
   }
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
     
 .encountercolumn {
     float: left;
     width: 25%;
-  }
+  } */
