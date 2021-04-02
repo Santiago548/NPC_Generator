@@ -1,7 +1,7 @@
 class Npc{
     static all = []
 
-    constructor({name, race, sex, alignment, melee, ranged, health, armor, strength, dexterity, constitution, wisdom, charisma, id }){ // encounter_id
+    constructor({name, race, sex, alignment, melee, ranged, health, armor, strength, dexterity, constitution, wisdom, charisma, id, encounter_id }){ // encounter_id
         this.name = name
         this.race = race
         this.sex = sex
@@ -16,7 +16,7 @@ class Npc{
         this.wisdom = wisdom
         this.charisma = charisma
         this.id = id
-        // this.encounter_id = encounter_id
+        this.encounter_id = encounter_id
         this.element = document.createElement('div')
         this.element.id = `npc-${this.id}`
 

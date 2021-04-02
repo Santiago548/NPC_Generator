@@ -6,23 +6,29 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <div class='item-z'>
+        <div class='header'>
             <h1>NPC Generator</h1>
         </div>
         
         <div class="container">
-        <div class='item-a'>
+        <div class='encountercolumn'>
             <h2>Encounters</h2>
             <ul id="encounter-list">
             </ul>
         </div>
 
-        <div class='item-b'>
+        <div class='npccolumnform'>
             <form id="npc-form">
                 <h2>Create a New NPC</h2>
             <div class='info-list'>
                 <h3>NPC Info:</h3>
-                <label for="npc-name">Name:</label>
+                <label for="npc-encounter">Encounter:</label>
+                <select name="encounter" id="encounter">
+                    <option name="enocunter_id" value="1">Encounter 1</option>
+                    <option name="encounter_id" value="2">Encounter 2</option>
+                    <option name="encounter_id" value="3">Encounter 3</option>
+                </select><br><br>
+                    <label for="npc-name">Name:</label>
                 <input type="text" name="name" id="npc-name"><br><br>
                 <label for="npc-race">Race:</label>
                 <select name="race" id="npc-race">
@@ -215,13 +221,13 @@
             </form>
         </div>
 
-        <div class= "item-c">
+        <div class= "npccollection">
             <h2>Here is your NPCs</h2>
                 <ul id="npc-list">
                 </ul>
         </div>
         
-        <div class= "item-d">
+        <div class= "npcinfocolumn">
             <h2>Here is your NPC</h2>
                 <ul id="npc-full-info">
                 </ul>

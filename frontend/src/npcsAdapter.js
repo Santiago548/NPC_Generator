@@ -32,7 +32,8 @@ class NpcsAdapter{
         const constitution = document.getElementById('npc-constitution').value
         const wisdom = document.getElementById('npc-wisdom').value
         const charisma = document.getElementById('npc-charisma').value
-    
+        const encounter_id = document.getElementById('encounter').value
+        
         let newNpc = {
             name,
             race,
@@ -46,7 +47,8 @@ class NpcsAdapter{
             dexterity,
             constitution,
             wisdom,
-            charisma
+            charisma,
+            encounter_id
         }
 
         let configNpc = {

@@ -1,16 +1,16 @@
-.item-z {
+.header {
   grid-area: header
 }
-.item-a {
+.encountercolumn {
   grid-area: encounter;
 }
-.item-b {
+.npccolumnform {
   grid-area: npcform;
 }
-.item-c {
+.npccollection {
   grid-area: npccollection;
 }
-.item-d {
+.npcinfocolumn {
   grid-area: npcshow;
 }
 
