@@ -5,7 +5,6 @@ class EncountersAdapter{
     }
 
     fetchEncounters(){
-        if(Encounter.exists){
             fetch(this.baseUrl)
             .then(res => res.json())
             .then(response => {
@@ -13,9 +12,6 @@ class EncountersAdapter{
                     this.sanitizeAndInitializeEncounter(el)
             })
         })
-        } else {
-            console.log("there are no Encounters")
-        }
     }
 
     sanitizeAndInitializeEncounter(data){

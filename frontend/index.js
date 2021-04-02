@@ -1,7 +1,7 @@
 const npcForm = document.getElementById('npc-form')
-// const encounterForm = document.getElementById('encounter-form')
 const npcAdapter = new NpcsAdapter
-// const encounterAdapter = new EncountersAdapter
+const encounterAdapter = new EncountersAdapter
+// const encounterForm = document.getElementById('encounter-form')
 
 document.addEventListener('DOMContentLoaded', () => {
     if(Npc.exists){
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log("No Npcs exist")
     }
-    // encounterAdapter.fetchEncounters()
+    encounterAdapter.fetchEncounters()
     npcForm.addEventListener('submit', npcAdapter.handleFormSubmit)
     // encounterForm.addEventListener('submit', encounterAdapter.handleFormSubmit)
 })

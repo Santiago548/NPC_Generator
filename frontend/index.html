@@ -17,6 +17,7 @@
         <div class='npccolumnform'>
             <form id="npc-form">
                 <h2>Create a New NPC</h2>
+            <div class='info-list'>
                 <h3>NPC Info:</h3>
                 <label for="npc-name">Name:</label>
                 <input type="text" name="name" id="npc-name"><br><br>
@@ -88,7 +89,8 @@
                     <option value="Chaotic Evil">Chaotic Evil</option>    
                 </select>
                 <br><br>
-                
+            </div>
+            <div class='equpment-list'>
                 <h3>Equipment and Health:</h3>
 
                 <label for="npc-health">Health:</label>
@@ -143,7 +145,8 @@
                     <option value="Longbow [1D8 piercing range(150/600)]">Longbow</option><!-- 1D8 piercing range(150/600) -->
                 </select>
                 <br><br>
-
+            </div>
+            <div id='abilty-list'>
             <h3>Ability Scores:</h3>
                 <label for="npc-strength">Strength:</label>
                 <select type='number' name='strength' id='npc-strength'>
@@ -203,6 +206,7 @@
                     <option value="5"> +5 / (20)</option>
                     <option value="6"> +6 / (22)</option>
                 </select>
+            </div>
                 <br><br>
                 <input type="submit" value="Create NPC">
             </form>
@@ -217,8 +221,8 @@
             </div>
         </div>
         
-        <!-- <script src="src/encounter.js" type="text/javascript"></script> -->
-        <!-- <script src="src/encountersAdapter.js" type="text/javascript"></script> -->
+        <script src="src/encounter.js" type="text/javascript"></script>
+        <script src="src/encountersAdapter.js" type="text/javascript"></script>
         <script src="src/npc.js" type="text/javascript"></script>
         <script src="src/npcsAdapter.js" type="text/javascript"></script>
         <script src="index.js" type="text/javascript"></script>

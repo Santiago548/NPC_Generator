@@ -12,9 +12,6 @@ class Encounter{
         Encounter.all.push(this)
     }
 
-    get encounterList(){
-        return document.getElementById('encounter-list')
-    }
     
     
     // addEventListeners(){
@@ -23,7 +20,7 @@ class Encounter{
         
         attachToDom(){
             this.encounterList.append(this.render())
-            this.addEventListeners()
+            // this.addEventListeners()
         }
         
         render(){
