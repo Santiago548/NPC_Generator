@@ -8,18 +8,11 @@
     <body>
         <h1>NPC Generator</h1>
 
-        <!-- <div class='encountercolumn'>
-            <form id="encounter-form"></form>
-                <h2>Create a New Encounter</h2>
-                <label for="encounter-name">Name:</label>
-                <input type="text" name="name" id="encounter-name"><br><br>
-                <label for="encounter-description">Description:</label>
-                <input type="text-field" name="description" id="encounter-description"><br><br>
-                <label for="encounter-environment">Environment:</label>
-                <input type="text" name="environment" id="encounter-environment"><br><br>
-                <input type="submit" value="Create Encounter">
-            </form>
-        </div> -->
+        <div class='encountercolumn'>
+            <h2>Encounters</h2>
+            <ul id="encounter-list">
+            </ul>
+        </div>
 
         <div class='npccolumnform'>
             <form id="npc-form">
@@ -119,7 +112,6 @@
                     <option value="Chain-Mail 16">Chain Mail</option> <!-- 16 -->
                     <option value="Splint 17">Splint</option><!-- 17  -->
                     <option value="Plate 18">Plate</option> <!-- 18  -->
-                    <!-- 12 + dex -->
                 </select><br><br>
                 <label for="npc-melee">Melee Weapon:</label>
                 <select type='text' name='melee' id='npc-melee'>

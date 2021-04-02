@@ -10,6 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_04_01_224108) do
 
+  create_table "encounters", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "npcs", force: :cascade do |t|
+    t.string "name"
+    t.string "race"
+    t.string "sex"
+    t.string "alignment"
+    t.string "melee"
+    t.string "ranged"
+    t.integer "health"
+    t.string "armor"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "constitution"
+    t.integer "wisdom"
+    t.integer "charisma"
+    t.integer "encounter_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["encounter_id"], name: "index_npcs_on_encounter_id"
+  end
+
+  add_foreign_key "npcs", "encounters"
 end

@@ -9,14 +9,18 @@ class EncountersAdapter{
             fetch(this.baseUrl)
             .then(res => res.json())
             .then(response => {
-            response.data.forEach(el => {
-                let encounter = new Encounter(el.attributes)
-                encounter.attachToDom(el)
+                response.data.forEach(el => {
+                    this.sanitizeAndInitializeEncounter(el)
             })
         })
         } else {
             console.log("there are no Encounters")
         }
+    }
+
+    sanitizeAndInitializeEncounter(data){
+        let encounter = new Encounter({id: data.id, ...data.attributes})
+        encounter.attachToDom()
     }
 
     // handleFormSubmit = (e) => {
