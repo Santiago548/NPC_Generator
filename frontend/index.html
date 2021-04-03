@@ -20,219 +20,226 @@
         <div class='npccolumnform'>
             <form id="npc-form">
                 <h2>Create a New NPC</h2>
-            <div class='info-list'>
-                <h3>NPC Info:</h3>
-                <label for="npc-encounter">Encounter:</label>
-                <select name="encounter" id="encounter">
-                    <option name="enocunter_id" value="1">Encounter 1</option>
-                    <option name="encounter_id" value="2">Encounter 2</option>
-                    <option name="encounter_id" value="3">Encounter 3</option>
-                </select><br><br>
+                <fieldset>
+                <div class='info-list'>
+                    <h3>NPC Info:</h3>
+                    <label for="npc-encounter">Encounter:</label>
+                    <select name="encounter" id="encounter">
+                        <option name="enocunter_id" value="1">Encounter 1</option>
+                        <option name="encounter_id" value="2">Encounter 2</option>
+                        <option name="encounter_id" value="3">Encounter 3</option>
+                    </select><br><br>
                     <label for="npc-name">Name:</label>
-                <input type="text" name="name" id="npc-name"><br><br>
-                <label for="npc-race">Race:</label>
-                <select name="race" id="npc-race">
-                    <!-- <option value="Random">Random</option> -->
-                    <option value="Dragonborn">Dragonborn</option>
-                    <option value="Dwarf">Dwarf</option>
-                    <option value="Elf">Elf</option>
-                    <option value="Gnome">Gnome</option>
-                    <option value="Half-Elf">Half-Elf</option>
-                    <option value="Halfling">Halfling</option>
-                    <!-- <option value="Half-Orc">Half-Orc</option> -->
-                    <option value="Human">Human</option>
-                    <option value="Tiefling">Tiefling</option>
-                    <!-- <option value="Orc of Exandria">Orc of Exandria</option>
-                    <option value="Leonin">Leonin</option>
-                    <option value="Satyr">Satyr</option> -->
-                    <!-- <option value="Genasi">Genasi</option> -->
+                    <input type="text" name="name" id="npc-name"><br><br>
+                    <label for="npc-race">Race:</label>
+                    <select name="race" id="npc-race">
+                        <!-- <option value="Random">Random</option> -->
+                        <option value="Dragonborn">Dragonborn</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Gnome">Gnome</option>
+                        <option value="Half-Elf">Half-Elf</option>
+                        <option value="Halfling">Halfling</option>
+                        <!-- <option value="Half-Orc">Half-Orc</option> -->
+                        <option value="Human">Human</option>
+                        <option value="Tiefling">Tiefling</option>
+                        <!-- <option value="Orc of Exandria">Orc of Exandria</option>
+                        <option value="Leonin">Leonin</option>
+                        <option value="Satyr">Satyr</option> -->
+                        <!-- <option value="Genasi">Genasi</option> -->
                     <option value="Goliath">Goliath</option>
-                    <!-- <option value="Aasimar">Aasimar</option>
-                    <option value="Bugbear">Bugbear</option> -->
-                    <option value="Firbolg">Firbolg</option>
-                    <option value="Goblin">Goblin</option>
-                    <!-- <option value="Hobgoblin">Hobgoblin</option> -->
-                    <!-- <option value="Kenku">Kenku</option>
-                    <option value="Kobold">Kobold</option>
-                    <option value="Lizardfolk">Lizardfolk</option> -->
-                    <option value="Orc">Orc</option>
-                    <option value="Tabaxi">Tabaxi</option>
-                    <!-- <option value="Triton">Triton</option>
-                    <option value="Yuan-ti Pureblood">Yuan-ti Pureblood</option>
+                        <!-- <option value="Aasimar">Aasimar</option>
+                        <option value="Bugbear">Bugbear</option> -->
+                        <option value="Firbolg">Firbolg</option>
+                        <option value="Goblin">Goblin</option>
+                        <!-- <option value="Hobgoblin">Hobgoblin</option> -->
+                        <!-- <option value="Kenku">Kenku</option>
+                        <option value="Kobold">Kobold</option>
+                        <option value="Lizardfolk">Lizardfolk</option> -->
+                        <option value="Orc">Orc</option>
+                        <option value="Tabaxi">Tabaxi</option>
+                        <!-- <option value="Triton">Triton</option>
+                        <option value="Yuan-ti Pureblood">Yuan-ti Pureblood</option>
                     <option value="Feral Tiefling">Feral Tiefling</option>
-                    <option value="Tortle">Tortle</option>
-                    <option value="Changeling">Changeling</option>
-                    <option value="Kalashtar">Kalashtar</option>
-                    <option value="Orc of Eberron">Orc of Eberron</option>
-                    <option value="Shifter">Shifter</option> -->
-                    <option value="Warforged">Warforged</option>
-                    <!-- <option value="Gith">Gith</option>
-                    <option value="Centaur">Centaur</option>
-                    <option value="Loxodon">Loxodon</option>
-                    <option value="Minotaur">Minotaur</option>
-                    <option value="Simic hybrid">Simic Hybrid</option>
-                    <option value="Vedalken">Vedalken</option>
-                    <option value="Verdan">Verdan</option>
-                    <option value="Locathah">Locathah</option>
-                    <option value="Grung">Grung</option> -->
-                </select><br><br>
-                <label for="npc-sex">Sex:</label>
-                <select type='text' name='sex' id='npc-sex'>
-                    <!-- <option value="Random">Random</option> -->
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="non-binary">Non-Binary</option>
-                </select>
-                <br><br>
-                <label for="npc-alignment">Alignment:</label>
-                <select type='text' name='alignment' id='npc-alignment'>
-                    <!-- <option value="Random">Random</option> -->
-                    <option value="lawful Good">Lawful Good</option>
-                    <option value="Neutral Good">Neutral Good</option>
-                    <option value="Chaotic Good">Chaotic Good</option>
-                    <option value="Lawful Neutral">Lawful Neutral</option>
-                    <option value="True Neutral">True Neutral</option>
-                    <option value="Chaotic Neutral">Chaotic Neutral</option>
-                    <option value="Lawful Evil">Lawful Evil</option>
-                    <option value="Neutral Evil">Neutral Evil</option>
-                    <option value="Chaotic Evil">Chaotic Evil</option>    
-                </select>
-                <br><br>
+                        <option value="Tortle">Tortle</option>
+                        <option value="Changeling">Changeling</option>
+                        <option value="Kalashtar">Kalashtar</option>
+                        <option value="Orc of Eberron">Orc of Eberron</option>
+                        <option value="Shifter">Shifter</option> -->
+                        <option value="Warforged">Warforged</option>
+                        <!-- <option value="Gith">Gith</option>
+                        <option value="Centaur">Centaur</option>
+                        <option value="Loxodon">Loxodon</option>
+                        <option value="Minotaur">Minotaur</option>
+                        <option value="Simic hybrid">Simic Hybrid</option>
+                        <option value="Vedalken">Vedalken</option>
+                        <option value="Verdan">Verdan</option>
+                        <option value="Locathah">Locathah</option>
+                        <option value="Grung">Grung</option> -->
+                    </select><br><br>
+                    <label for="npc-sex">Sex:</label>
+                    <select type='text' name='sex' id='npc-sex'>
+                        <!-- <option value="Random">Random</option> -->
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="non-binary">Non-Binary</option>
+                    </select>
+                    <br><br>
+                    <label for="npc-alignment">Alignment:</label>
+                    <select type='text' name='alignment' id='npc-alignment'>
+                        <!-- <option value="Random">Random</option> -->
+                        <option value="lawful Good">Lawful Good</option>
+                        <option value="Neutral Good">Neutral Good</option>
+                        <option value="Chaotic Good">Chaotic Good</option>
+                        <option value="Lawful Neutral">Lawful Neutral</option>
+                        <option value="True Neutral">True Neutral</option>
+                        <option value="Chaotic Neutral">Chaotic Neutral</option>
+                        <option value="Lawful Evil">Lawful Evil</option>
+                        <option value="Neutral Evil">Neutral Evil</option>
+                        <option value="Chaotic Evil">Chaotic Evil</option>    
+                    </select>
+                    <br><br>
+                </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                <div class='equpment-list'>
+                    <h3>Equipment and Health:</h3>
+
+                    <label for="npc-health">Health:</label>
+                    <select type='integer' name='health' id='npc-health'>
+                        <option value=10>10 hp</option>
+                        <option value=15>15 hp</option>
+                        <option value=20>20 hp</option>
+                    </select><br><br>
+                    <label for="npc-armor">Armor Class:</label>
+                    <select type='integer' name='armor' id='npc-armor'>
+                        <option value="Padded 11">Padded</option> <!-- 11 + dex -->
+                        <option value="Leather 11">Leather</option><!-- 11 + dex -->
+                        <option value="Studded Leather 12">Studded Leather</option><!-- 12 + dex -->
+                        <option value="Hide 12">Hide</option> <!-- 12 + dex(max2) -->
+                        <option value="Chain-Shirt 13">Chain Shirt</option> <!-- 13 + dex(max2) -->
+                        <option value="Scale-Mail 14">Scale Mail</option> <!-- 14 + dex(max2) -->
+                        <option value="Spiked-Armor 14">Spiked Armor</option> <!-- 14 + dex(max2) -->
+                        <option value="Breatplate 14">Breatplate</option> <!-- 14 + dex(max2) -->
+                        <option value="Halfplate 15">Halfplate</option> <!-- 15 + dex(max 2) -->
+                        <option value="Ring-Mail 14">Ring Mail</option> <!-- 14 -->
+                        <option value="Chain-Mail 16">Chain Mail</option> <!-- 16 -->
+                        <option value="Splint 17">Splint</option><!-- 17  -->
+                        <option value="Plate 18">Plate</option> <!-- 18  -->
+                    </select><br><br>
+                    <label for="npc-melee">Melee Weapon:</label>
+                    <select type='text' name='melee' id='npc-melee'>
+                        <!-- <option value="Random">Random</option> -->
+                        <option value="Battle Axe [1d8 Slashing]">Battle Axe</option><!-- 1D8 Slashing -->
+                        <option value="Club [1d4 Bludgeoning]">Club</option><!-- 1D4 Bludgeoning -->
+                        <option value="Dagger [1d4 piercing]">Dagger</option><!--  [1D4 piercing] -->
+                        <option value="Greataxe [1d12 Slashing]">Greataxe</option><!-- 1D12 Slashing -->
+                        <option value="Great Club [1d8 Slashing]">Great Club</option><!-- 1D8 Slashing -->
+                        <option value="Hand Axe [1d6 Slashing]">Hand Axe</option><!-- 1D6 Slashing -->
+                        <option value="Long Sword [1d8 Slashing]">Long Sword</option><!-- 1D8 Slashing -->
+                        <option value="Quarterstaff [1d6 Bludgeoning]">Quarterstaff</option>
+                        <option value="Rapier [1d8 Piercing]">Rapier</option><!-- 1D8 Piercing -->
+                        <option value="Scimitar [1d6 Slashing]">Scimitar</option><!-- 1D6 Slashing -->
+                        <option value="Short Sword [1d6 Slashing]">Short Sword</option><!-- 1D6 Piercing -->
+                    </select>
+                    <br><br>
+
+                    <label for="npc-ranged">Ranged Weapon:</label>
+                    <select type='text' name='melee' id='npc-ranged'>
+                        <!-- <option value="Random">Random</option> -->
+                        <option value="Blowgun [1 Piercing range (25/100)]">Blowgun</option><!-- 1 piercing range(25/100) -->
+                        <option value="Light Crossbow [1D8 Piercing range(80/320)] "> Light Crossbow</option><!-- 1D8 Piercing range(80/320) -->
+                        <option value="Dart [1D4 Piercing range(20/60)]">Dart</option><!-- 1D4 Piercing range(20/60) -->
+                        <option value="Shortbow [1D6 piercing range(80/320)]">Shortbow</option><!-- 1D6 piercing range(80/320) -->
+                        <option value="Sling [1D4 piercing range(30/120) ]">Sling</option><!-- 1D4 piercing range(30/120) -->
+                        <option value="Hand Crossbow [1D6 Piercing range(30/120)]">Hand Crossbow</option><!-- 1D6 Piercing range(30/120) -->
+                        <option value="Heavy Crossbow [1D10 piercing range(100/400)]">Heavy Crossbow</option><!-- 1D10 piercing range(100/400) -->
+                        <option value="Longbow [1D8 piercing range(150/600)]">Longbow</option><!-- 1D8 piercing range(150/600) -->
+                    </select>
+                    <br><br>
+                </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                <div id='abilty-list'>
+                <h3>Ability Scores:</h3>
+                    <label for="npc-strength">Strength:</label>
+                    <select type='number' name='strength' id='npc-strength'>
+                        <!-- <option value="0">Random</option> -->
+                        <option value="1"> +1 / (12)</option>
+                        <option value="2"> +2 / (14)</option>
+                        <option value="3"> +3 / (16)</option>
+                        <option value="4"> +4 / (18)</option>
+                        <option value="5"> +5 / (20)</option>
+                        <option value="6"> +6 / (22)</option>
+                    </select>
+                    <br><br>
+
+                    <label for="npc-dexterity">Dexterity:</label>
+                    <select type='number' name='dexterity' id='npc-dexterity'>
+                        <!-- <option value="0">Random</option> -->
+                        <option value="1"> +1 / (12)</option>
+                        <option value="2"> +2 / (14)</option>
+                        <option value="3"> +3 / (16)</option>
+                        <option value="4"> +4 / (18)</option>
+                        <option value="5"> +5 / (20)</option>
+                        <option value="6"> +6 / (22)</option>
+                    </select>
+                    <br><br>
+
+                    <label for="npc-constitution">Constitution:</label>
+                    <select type='number' name='constitution' id='npc-constitution'>
+                        <!-- <option value="0">Random</option> -->
+                        <option value="1"> +1 / (12)</option>
+                        <option value="2"> +2 / (14)</option>
+                        <option value="3"> +3 / (16)</option>
+                        <option value="4"> +4 / (18)</option>
+                        <option value="5"> +5 / (20)</option>
+                        <option value="6"> +6 / (22)</option>
+                    </select>
+                    <br><br>
+
+                    <label for="npc-wisdom">Wisdom:</label>
+                    <select type='number' name='wisdom' id='npc-wisdom'>
+                        <!-- <option value="0">Random</option> -->
+                        <option value="1"> +1 / (12)</option>
+                        <option value="2"> +2 / (14)</option>
+                        <option value="3"> +3 / (16)</option>
+                        <option value="4"> +4 / (18)</option>
+                        <option value="5"> +5 / (20)</option>
+                        <option value="6"> +6 / (22)</option>
+                    </select>
+                    <br><br>
+
+                    <label for="npc-charisma">Charisma:</label>
+                    <select type='number' name='charisma' id='npc-charisma'>
+                        <!-- <option value="0">Random</option> -->
+                        <option value="1"> +1 / (12)</option>
+                        <option value="2"> +2 / (14)</option>
+                        <option value="3"> +3 / (16)</option>
+                        <option value="4"> +4 / (18)</option>
+                        <option value="5"> +5 / (20)</option>
+                        <option value="6"> +6 / (22)</option>
+                    </select>
+                </div>
+                    <br><br>
+                    <input type="submit" value="Create NPC">
+                </form>
             </div>
-            <div class='equpment-list'>
-                <h3>Equipment and Health:</h3>
 
-                <label for="npc-health">Health:</label>
-                <select type='integer' name='health' id='npc-health'>
-                    <option value=10>10 hp</option>
-                    <option value=15>15 hp</option>
-                    <option value=20>20 hp</option>
-                </select><br><br>
-                <label for="npc-armor">Armor Class:</label>
-                <select type='integer' name='armor' id='npc-armor'>
-                    <option value="Padded 11">Padded</option> <!-- 11 + dex -->
-                    <option value="Leather 11">Leather</option><!-- 11 + dex -->
-                    <option value="Studded Leather 12">Studded Leather</option><!-- 12 + dex -->
-                    <option value="Hide 12">Hide</option> <!-- 12 + dex(max2) -->
-                    <option value="Chain-Shirt 13">Chain Shirt</option> <!-- 13 + dex(max2) -->
-                    <option value="Scale-Mail 14">Scale Mail</option> <!-- 14 + dex(max2) -->
-                    <option value="Spiked-Armor 14">Spiked Armor</option> <!-- 14 + dex(max2) -->
-                    <option value="Breatplate 14">Breatplate</option> <!-- 14 + dex(max2) -->
-                    <option value="Halfplate 15">Halfplate</option> <!-- 15 + dex(max 2) -->
-                    <option value="Ring-Mail 14">Ring Mail</option> <!-- 14 -->
-                    <option value="Chain-Mail 16">Chain Mail</option> <!-- 16 -->
-                    <option value="Splint 17">Splint</option><!-- 17  -->
-                    <option value="Plate 18">Plate</option> <!-- 18  -->
-                </select><br><br>
-                <label for="npc-melee">Melee Weapon:</label>
-                <select type='text' name='melee' id='npc-melee'>
-                    <!-- <option value="Random">Random</option> -->
-                    <option value="Battle Axe [1d8 Slashing]">Battle Axe</option><!-- 1D8 Slashing -->
-                    <option value="Club [1d4 Bludgeoning]">Club</option><!-- 1D4 Bludgeoning -->
-                    <option value="Dagger [1d4 piercing]">Dagger</option><!--  [1D4 piercing] -->
-                    <option value="Greataxe [1d12 Slashing]">Greataxe</option><!-- 1D12 Slashing -->
-                    <option value="Great Club [1d8 Slashing]">Great Club</option><!-- 1D8 Slashing -->
-                    <option value="Hand Axe [1d6 Slashing]">Hand Axe</option><!-- 1D6 Slashing -->
-                    <option value="Long Sword [1d8 Slashing]">Long Sword</option><!-- 1D8 Slashing -->
-                    <option value="Quarterstaff [1d6 Bludgeoning]">Quarterstaff</option>
-                    <option value="Rapier [1d8 Piercing]">Rapier</option><!-- 1D8 Piercing -->
-                    <option value="Scimitar [1d6 Slashing]">Scimitar</option><!-- 1D6 Slashing -->
-                    <option value="Short Sword [1d6 Slashing]">Short Sword</option><!-- 1D6 Piercing -->
-                </select>
-                <br><br>
-
-                <label for="npc-ranged">Ranged Weapon:</label>
-                <select type='text' name='melee' id='npc-ranged'>
-                    <!-- <option value="Random">Random</option> -->
-                    <option value="Blowgun [1 Piercing range (25/100)]">Blowgun</option><!-- 1 piercing range(25/100) -->
-                    <option value="Light Crossbow [1D8 Piercing range(80/320)] "> Light Crossbow</option><!-- 1D8 Piercing range(80/320) -->
-                    <option value="Dart [1D4 Piercing range(20/60)]">Dart</option><!-- 1D4 Piercing range(20/60) -->
-                    <option value="Shortbow [1D6 piercing range(80/320)]">Shortbow</option><!-- 1D6 piercing range(80/320) -->
-                    <option value="Sling [1D4 piercing range(30/120) ]">Sling</option><!-- 1D4 piercing range(30/120) -->
-                    <option value="Hand Crossbow [1D6 Piercing range(30/120)]">Hand Crossbow</option><!-- 1D6 Piercing range(30/120) -->
-                    <option value="Heavy Crossbow [1D10 piercing range(100/400)]">Heavy Crossbow</option><!-- 1D10 piercing range(100/400) -->
-                    <option value="Longbow [1D8 piercing range(150/600)]">Longbow</option><!-- 1D8 piercing range(150/600) -->
-                </select>
-                <br><br>
+            <div class= "npccollection">
+                <h2>Here is your NPCs</h2>
+                    <ul id="npc-list">
+                    </ul>
             </div>
-            <div id='abilty-list'>
-            <h3>Ability Scores:</h3>
-                <label for="npc-strength">Strength:</label>
-                <select type='number' name='strength' id='npc-strength'>
-                    <!-- <option value="0">Random</option> -->
-                    <option value="1"> +1 / (12)</option>
-                    <option value="2"> +2 / (14)</option>
-                    <option value="3"> +3 / (16)</option>
-                    <option value="4"> +4 / (18)</option>
-                    <option value="5"> +5 / (20)</option>
-                    <option value="6"> +6 / (22)</option>
-                </select>
-                <br><br>
-
-                <label for="npc-dexterity">Dexterity:</label>
-                <select type='number' name='dexterity' id='npc-dexterity'>
-                    <!-- <option value="0">Random</option> -->
-                    <option value="1"> +1 / (12)</option>
-                    <option value="2"> +2 / (14)</option>
-                    <option value="3"> +3 / (16)</option>
-                    <option value="4"> +4 / (18)</option>
-                    <option value="5"> +5 / (20)</option>
-                    <option value="6"> +6 / (22)</option>
-                </select>
-                <br><br>
-
-                <label for="npc-constitution">Constitution:</label>
-                <select type='number' name='constitution' id='npc-constitution'>
-                    <!-- <option value="0">Random</option> -->
-                    <option value="1"> +1 / (12)</option>
-                    <option value="2"> +2 / (14)</option>
-                    <option value="3"> +3 / (16)</option>
-                    <option value="4"> +4 / (18)</option>
-                    <option value="5"> +5 / (20)</option>
-                    <option value="6"> +6 / (22)</option>
-                </select>
-                <br><br>
-
-                <label for="npc-wisdom">Wisdom:</label>
-                <select type='number' name='wisdom' id='npc-wisdom'>
-                    <!-- <option value="0">Random</option> -->
-                    <option value="1"> +1 / (12)</option>
-                    <option value="2"> +2 / (14)</option>
-                    <option value="3"> +3 / (16)</option>
-                    <option value="4"> +4 / (18)</option>
-                    <option value="5"> +5 / (20)</option>
-                    <option value="6"> +6 / (22)</option>
-                </select>
-                <br><br>
-
-                <label for="npc-charisma">Charisma:</label>
-                <select type='number' name='charisma' id='npc-charisma'>
-                    <!-- <option value="0">Random</option> -->
-                    <option value="1"> +1 / (12)</option>
-                    <option value="2"> +2 / (14)</option>
-                    <option value="3"> +3 / (16)</option>
-                    <option value="4"> +4 / (18)</option>
-                    <option value="5"> +5 / (20)</option>
-                    <option value="6"> +6 / (22)</option>
-                </select>
-            </div>
-                <br><br>
-                <input type="submit" value="Create NPC">
-            </form>
-        </div>
-
-        <div class= "npccollection">
-            <h2>Here is your NPCs</h2>
-                <ul id="npc-list">
-                </ul>
-        </div>
         
-        <div class= "npcinfocolumn">
-            <h2>Here is your NPC</h2>
-                <ul id="npc-full-info">
-                </ul>
+            <div class= "npcinfocolumn">
+                <h2>Here is your NPC</h2>
+                    <ul id="npc-full-info">
+                    </ul>
+            </div>
         </div>
-    </div>
         
         <script src="src/encounter.js" type="text/javascript"></script>
         <script src="src/encountersAdapter.js" type="text/javascript"></script>
@@ -240,5 +247,5 @@
         <script src="src/npcsAdapter.js" type="text/javascript"></script>
         <script src="index.js" type="text/javascript"></script>
 
-    </body>
-</html>
+        </body>
+    </html>
