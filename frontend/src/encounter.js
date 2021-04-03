@@ -4,7 +4,7 @@ class Encounter{
     constructor({id, name}){
         this.id = id
         this.name = name
-        this.element = document.createElement('li')
+        this.element = document.createElement('h4')
         this.element.id = `encounter-${id}`
         this.encounterList = document.getElementById('encounter-list')
         this. sorted = false
@@ -25,7 +25,7 @@ class Encounter{
         
         render(){
             this.element.innerHTML = `
-            <h3>${this.name}</h3>
+            <button type="button">${this.name}</button>
             `
             return this.element
         }
