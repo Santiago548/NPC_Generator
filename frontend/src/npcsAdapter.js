@@ -69,6 +69,7 @@ class NpcsAdapter{
 
     }
 
+    // delete function
     deleteNpc(id){
         let configNpc = {
             method: 'DELETE',
@@ -87,6 +88,10 @@ class NpcsAdapter{
         
         let npc = document.getElementById(`npc-${id}`)
         npc.remove()
+    }
+
+    npcFullInfo(id){
+        
     }
 
 }

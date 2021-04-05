@@ -16,7 +16,7 @@ class Npc{
         this.wisdom = wisdom
         this.charisma = charisma
         this.id = id
-        // this.encounter_id = encounter_id
+        this.encounter_id = encounter_id
         this.element = document.createElement('div')
         this.element.id = `npc-${this.id}`
 
@@ -41,11 +41,7 @@ class Npc{
 
     attachToDom(){
         this.npcList.append(this.renderNpcList())
-        this.addEventListeners()
-    }
-
-    attachToDom(){
-        this.npcInfo.append(this.renderNpc())
+        // this.npcInfo.append(this.renderNpc())
         this.addEventListeners()
     }
 
@@ -85,17 +81,22 @@ class Npc{
         HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
         ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
         <button class="delete" data-id="${this.id}">Delete</button>
+        <button class="full-info" data-id="${this.id}">Full Info</button>
         </fieldset>
         `
         return this.element
     }
 
    handleListClick = (e) => {
+       let id = e.target.dataset.id
        if (e.target.className === "delete"){
-           let id = e.target.dataset.id
            npcAdapter.deleteNpc(id)
+       } else if (e.target.className === 'full-info'){
+           npcAdapter.npcFullInfo(id)
        }
    }
+
+   
 
    armorFormat() {
     if(this.armor == "Padded 11") {
