@@ -11,33 +11,35 @@ class Encounter{
 
         Encounter.all.push(this)
     }
+    
+    addEventListeners(){
+            this.element.addEventListener('click', this.handleListClick)
+    }
+        
+    attachToDom(){
+        this.encounterList.append(this.render())
+        this.addEventListeners()
+    }
+        
+    render(){
+        this.element.innerHTML = `
+        <button id="encounter-${this.id}" type="button">${this.name}</button>
+        `
+        return this.element
+    }
+        
+    static findById(id){
+        return Encounter.all.find(encounter => encounter.id == id)
+    }
 
-    
-    
-    // addEventListeners(){
-        //     this.element.addEventListener('click', this.handleListClick)
-        // }
-        
-        attachToDom(){
-            this.encounterList.append(this.render())
-            // this.addEventListeners()
-        }
-        
-        render(){
-            this.element.innerHTML = `
-            <button type="button">${this.name}</button>
-            `
-            return this.element
-        }
-        
-        static findById(id){
-            return Encounter.all.find(encounter => encounter.id == id)
+    handleListClick = (e) => {
+        let id = e.target.dataset.id
+            if(e.target.className === "encounter-1"){
+                encounterAdapter.npcList(id)
+            } else if(e.target.className === "encounter-2"){
+                encounterAdapter.npcList(id)
+            } else if(e.targer.className === "encounter-3"){
+                encounterAdapter.npcList(id)
+            }
         }
     }
-    //    handleListClick = (e) => {
-        //        if(e.target.className === "delete"){
-            //            let id = e.target.dataset.id
-            //            encounterAdapter.deleteencounter(id)
-            //        }
-            //    }
-            
