@@ -11,6 +11,10 @@ class Encounter{
 
         Encounter.all.push(this)
     }
+
+    get npcs(){
+        return Npc.all.filter(i => i.encounter_id == this.id)
+    }
     
     addEventListeners(){
             this.element.addEventListener('click', this.handleListClick)
@@ -31,15 +35,24 @@ class Encounter{
     static findById(id){
         return Encounter.all.find(encounter => encounter.id == id)
     }
-
+    //working
+    displayNpcList = (e) => {
+        const npcList = document.getElementById('npc-list')
+        
+        npcList.innerHTML = ""
+        this.npcs.forEach(i => {
+            i.attachToDom()
+        })
+    }
+    //working
     handleListClick = (e) => {
         let id = e.target.dataset.id
             if(e.target.className === "encounter-1"){
-                encounterAdapter.npcList(id)
+                encounterAdapter.displayNpcList(id)
             } else if(e.target.className === "encounter-2"){
-                encounterAdapter.npcList(id)
+                encounterAdapter.dispalyNpcList(id)
             } else if(e.targer.className === "encounter-3"){
-                encounterAdapter.npcList(id)
+                encounterAdapter.displayNpcList(id)
             }
         }
     }
