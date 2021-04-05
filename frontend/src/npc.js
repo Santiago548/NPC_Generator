@@ -30,6 +30,10 @@ class Npc{
     get npcInfo(){
         return document.getElementById('npc-full-info')
     }
+
+    get npc(){
+        return Npc.all.filter(i => i.npc_id == this.id)
+    }
     
     static findById(id){
         return Npc.all.find(npc => npc.id == id)
@@ -44,36 +48,6 @@ class Npc{
         this.addEventListeners() 
     }
     
-    attachToDomNpc(){
-        this.npcInfo.append(this.npcFullInfo())
-        this.addEventListeners()
-    }
-    
-    npcFullInfo(){
-        this.element.innerHTML = `
-        <fieldset>
-        <span class="name">${this.name}</span><br>
-        The <span class="alignment">${this.alignment}</span>
-        <span class="sex">${this.sex}</span>
-        <span class="race">${this.race}</span><br>
-        <br>
-        HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
-        ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
-        <b>WEAPONS:</b><br>
-        MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
-        RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
-        <b>ABILITY SCORES:</b><br>
-        Strength +<span class="strength">${this.strength}</span><br>
-        Dexterity +<span class="dexterity">${this.dexterity}</span><br>
-        Constitution +<span class="constitution">${this.constitution}</span><br>
-        Wisdom +<span class="wisdom">${this.wisdom}</span><br>
-        Charisma +<span class="charisma">${this.charisma}</span>
-        <button class="delete" data-id="${this.id}">Delete</button>
-        </fieldset>
-        `
-        return id.element
-    }
-
     renderNpcList(){
         this.element.innerHTML = `
         <fieldset>
@@ -90,18 +64,42 @@ class Npc{
         `
         return this.element
     }
+    
+    displayNpc = (e) => {
+        this.npcInfo.innerHTML = `
+        <fieldset>
+        <span class="name">${this.name}</span><br>
+        The <span class="alignment">${this.alignment}</span>
+        <span class="sex">${this.sex}</span>
+        <span class="race">${this.race}</span><br>
+        <br>
+        HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
+        ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
+        <b>WEAPONS:</b><br>
+        MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
+        RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
+        <b>ABILITY SCORES:</b><br>
+        Strength +<span class="strength">${this.strength}</span><br>
+        Dexterity +<span class="dexterity">${this.dexterity}</span><br>
+        Constitution +<span class="constitution">${this.constitution}</span><br>
+        Wisdom +<span class="wisdom">${this.wisdom}</span><br>
+        Charisma +<span class="charisma">${this.charisma}</span><br>
+        <button class="delete" data-id="${this.id}">Delete</button>
+        </fieldset>
+        `
+        return this.element
+    }
 
    handleListClick = (e) => {
        let id = e.target.dataset.id
        if (e.target.className === "delete"){
            npcAdapter.deleteNpc(id)
        } else if (e.target.className === 'full-info'){
-           npcAdapter.renderNpc(id)
-       }
+           this.displayNpc(id)
+       } 
    }
 
    
-
    armorFormat() {
     if(this.armor == "Padded 11") {
         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
