@@ -64,7 +64,7 @@ class NpcsAdapter{
         .then(res => res.json())
         .then(json => {
             let npc = new Npc(json.data.attributes)
-            npc.attachToDom()
+            npc.attachToDom() 
         })
 
         npcForm.reset()
@@ -90,10 +90,6 @@ class NpcsAdapter{
         
         let npc = document.getElementById(`npc-${id}`)
         npc.remove()
-    }
-
-    npcFullInfo(id){
-
     }
 
 }

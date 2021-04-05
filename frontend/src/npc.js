@@ -41,11 +41,15 @@ class Npc{
 
     attachToDom(){
         this.npcList.append(this.renderNpcList())
-        // this.npcInfo.append(this.renderNpc())
+        this.addEventListeners() 
+    }
+    
+    attachToDomNpc(){
+        this.npcInfo.append(this.npcFullInfo())
         this.addEventListeners()
     }
-
-    renderNpc(){
+    
+    npcFullInfo(){
         this.element.innerHTML = `
         <fieldset>
         <span class="name">${this.name}</span><br>
@@ -67,7 +71,7 @@ class Npc{
         <button class="delete" data-id="${this.id}">Delete</button>
         </fieldset>
         `
-        return this.element
+        return id.element
     }
 
     renderNpcList(){
@@ -92,7 +96,7 @@ class Npc{
        if (e.target.className === "delete"){
            npcAdapter.deleteNpc(id)
        } else if (e.target.className === 'full-info'){
-           npcAdapter.npcFullInfo(id)
+           npcAdapter.renderNpc(id)
        }
    }
 
