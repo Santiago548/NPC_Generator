@@ -22,7 +22,7 @@ class NpcsController < ApplicationController
     def destroy
         npc = Npc.find(params[:id])
         npc.destroy
-        render json: {message: `#{npc.name} has been deleted!`}
+        render json: {message: "#{npc.name} has been deleted!"}
     end
 
     # def update

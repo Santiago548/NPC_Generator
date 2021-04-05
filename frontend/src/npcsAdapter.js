@@ -67,6 +67,8 @@ class NpcsAdapter{
             npc.attachToDom()
         })
 
+        npcForm.reset()
+
     }
 
     // delete function
@@ -91,7 +93,7 @@ class NpcsAdapter{
     }
 
     npcFullInfo(id){
-        
+
     }
 
 }
