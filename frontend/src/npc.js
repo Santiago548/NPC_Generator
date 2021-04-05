@@ -67,7 +67,7 @@ class Npc{
     
     displayNpc = (e) => {
         this.npcInfo.innerHTML = `
-        <fieldset>
+        <fieldset id="npc-full-info-${this.id}">
         <span class="name">${this.name}</span><br>
         The <span class="alignment">${this.alignment}</span>
         <span class="sex">${this.sex}</span>
@@ -96,7 +96,7 @@ class Npc{
            npcAdapter.deleteNpc(id)
        } else if (e.target.className === 'full-info'){
            this.displayNpc(id)
-       } 
+       }
    }
 
    

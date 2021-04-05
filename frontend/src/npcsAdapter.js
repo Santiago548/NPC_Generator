@@ -90,6 +90,9 @@ class NpcsAdapter{
         
         let npc = document.getElementById(`npc-${id}`)
         npc.remove()
+        
+        let npcFullInfo = document.getElementById(`npc-full-info-${id}`)
+        npcFullInfo.remove()
     }
 
 }
