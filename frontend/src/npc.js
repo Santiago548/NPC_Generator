@@ -16,7 +16,7 @@ class Npc{
         this.wisdom = wisdom
         this.charisma = charisma
         this.id = id
-        this.encounter_id = encounter_id
+        // this.encounter_id = encounter_id
         this.element = document.createElement('div')
         this.element.id = `npc-${this.id}`
 
@@ -25,6 +25,10 @@ class Npc{
 
     get npcList(){
         return document.getElementById('npc-list')
+    }
+
+    get npcInfo(){
+        return document.getElementById('npc-full-info')
     }
     
     static findById(id){
@@ -36,13 +40,18 @@ class Npc{
     }
 
     attachToDom(){
-        this.npcList.append(this.render())
+        this.npcList.append(this.renderNpcList())
         this.addEventListeners()
     }
 
-    render(){
+    attachToDom(){
+        this.npcInfo.append(this.renderNpc())
+        this.addEventListeners()
+    }
+
+    renderNpc(){
         this.element.innerHTML = `
-        <li>
+        <fieldset>
         <span class="name">${this.name}</span><br>
         The <span class="alignment">${this.alignment}</span>
         <span class="sex">${this.sex}</span>
@@ -59,8 +68,24 @@ class Npc{
         Constitution +<span class="constitution">${this.constitution}</span><br>
         Wisdom +<span class="wisdom">${this.wisdom}</span><br>
         Charisma +<span class="charisma">${this.charisma}</span>
-        </li>
         <button class="delete" data-id="${this.id}">Delete</button>
+        </fieldset>
+        `
+        return this.element
+    }
+
+    renderNpcList(){
+        this.element.innerHTML = `
+        <fieldset>
+        <span class="name">${this.name}</span><br>
+        The <span class="alignment">${this.alignment}</span>
+        <span class="sex">${this.sex}</span>
+        <span class="race">${this.race}</span><br>
+        <br>
+        HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
+        ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
+        <button class="delete" data-id="${this.id}">Delete</button>
+        </fieldset>
         `
         return this.element
     }
