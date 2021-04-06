@@ -36,7 +36,7 @@ class Encounter{
         return this.element
     }
         
-    //working fully
+    //working functionallity fully
     displayNpcList = (e) => {
         const npcList = document.getElementById('npc-list')
         
@@ -60,16 +60,3 @@ class Encounter{
         return encounterHeader
     }
 }
-    
-    //working
-    // handleListClick = (e) => {
-    //     let id = e.target.dataset.id
-    //         if(e.target.className === "encounter-1"){
-    //             encounterAdapter.displayNpcList(id)
-    //         } else if(e.target.className === "encounter-2"){
-    //             encounterAdapter.dispalyNpcList(id)
-    //         } else if(e.targer.className === "encounter-3"){
-    //             encounterAdapter.displayNpcList(id)
-    //         }
-    //     }
-    // }
