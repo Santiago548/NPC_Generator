@@ -29,6 +29,20 @@
   "encounter npcform npccollection npcshow";
 }
 
+fieldset {
+  background-color: rgb(175, 175, 175);
+}
+
+legend {
+  background-color: rgb(175, 175, 175);
+  border: rgb(30, 29, 29);
+  border-style: solid;
+}
+
+header {
+  text-align: center;
+}
+
 /* .npccolumnform {
     float: left;
     width: 25%;
