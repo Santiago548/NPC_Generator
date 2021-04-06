@@ -46,16 +46,16 @@ class Encounter{
         })
         
         let encounterHeader = document.getElementById('npcs-header')
-        let id = e.target.dataset.id
-        if(id == "1"){
+        let id = e.target.id
+        if(id == "encounter-1"){
             encounterHeader.innerHTML = 
-            "<h2 id='npcs-header>Encounter 1 NPC's</h2>"
-        } else if(id == "2"){
+            "<h2 id='npcs-header'>Encounter 1 NPC's</h2>"
+        } else if(id == "encounter-2"){
             encounterHeader.innerHTML = 
-            "<h2 id='npcs-header>Encounter 2 NPC's</h2>"
-        } else if(id == "3"){
+            "<h2 id='npcs-header'>Encounter 2 NPC's</h2>"
+        } else if(id == "encounter-3"){
             encounterHeader.innerHTML = 
-            "<h2 id='npcs-header>Encounter 3 NPC's</h2>"
+            "<h2 id='npcs-header'>Encounter 3 NPC's</h2>"
         }
         return encounterHeader
     }
