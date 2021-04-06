@@ -14,10 +14,10 @@
   grid-area: npcshow;
 }
 
-
 .container {
+  background-image: url('images/dndbackground.jpg');
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 10% 30% 30% 30%;
   grid-template-rows: auto;
   /* column-gap: 6px; */
   row-gap: 10px;
@@ -29,6 +29,11 @@
   "encounter npcform npccollection npcshow";
 }
 
+.header {
+  background-color: red;
+  text-align: center;
+}
+
 fieldset {
   background-color: rgb(175, 175, 175);
 }
@@ -38,10 +43,6 @@ legend {
   border: rgb(30, 29, 29);
   border-style: solid;
   border-width: 1px;
-}
-
-header {
-  text-align: center;
 }
 
 h2 {
