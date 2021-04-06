@@ -37,6 +37,7 @@ legend {
   background-color: rgb(175, 175, 175);
   border: rgb(30, 29, 29);
   border-style: solid;
+  border-width: 1px;
 }
 
 header {

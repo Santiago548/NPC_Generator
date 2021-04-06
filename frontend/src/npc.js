@@ -84,7 +84,7 @@ class Npc{
         Constitution +<span class="constitution">${this.constitution}</span><br>
         Wisdom +<span class="wisdom">${this.wisdom}</span><br>
         Charisma +<span class="charisma">${this.charisma}</span><br>
-        <button class="delete" data-id="${this.id}">Delete</button>
+        <button class="hide-npc-full-info" data-id="${this.id}">Hide</button>
         </fieldset>
         `
         return this.element
@@ -96,10 +96,16 @@ class Npc{
            npcAdapter.deleteNpc(id)
        } else if (e.target.className === 'full-info'){
            this.displayNpc(id)
+       } else if (e.target.className === 'hide-npc-full-info'){
+           this.hideNpcFullInfo()
        }
    }
 
-   
+   hideNpcFullInfo(){
+    let npcel = document.getElementById("hide-npc-full-info")
+    npcel.innerHTML = ""
+   }
+
    armorFormat() {
     if(this.armor == "Padded 11") {
         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
