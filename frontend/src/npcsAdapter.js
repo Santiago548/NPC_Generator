@@ -10,7 +10,7 @@ class NpcsAdapter{
         .then(response => {
             response.data.forEach(el => {
                 let npc = new Npc(el.attributes)
-                npc.attachToDom(el)
+                npc.attachToDomNpcList(el)
             })
         })
         
@@ -64,7 +64,7 @@ class NpcsAdapter{
         .then(res => res.json())
         .then(json => {
             let npc = new Npc(json.data.attributes)
-            npc.attachToDom() 
+            npc.attachToDomNpcList() 
         })
 
         npcForm.reset()

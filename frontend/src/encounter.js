@@ -16,8 +16,12 @@ class Encounter{
         return Npc.all.filter(i => i.encounter_id == this.id)
     }
     
+    static find(id){
+        return Encounter.all.find(e => e.id == id)
+    }
+
     addEventListeners(){
-            this.element.addEventListener('click', this.handleListClick)
+            this.element.addEventListener('click', this.displayNpcList)
     }
         
     attachToDom(){
@@ -32,27 +36,38 @@ class Encounter{
         return this.element
     }
         
-    static findById(id){
-        return Encounter.all.find(encounter => encounter.id == id)
-    }
     //working
     displayNpcList = (e) => {
         const npcList = document.getElementById('npc-list')
         
         npcList.innerHTML = ""
         this.npcs.forEach(i => {
-            i.attachToDom()
+            i.attachToDomNpcList()
         })
-    }
-    //working
-    handleListClick = (e) => {
-        let id = e.target.dataset.id
-            if(e.target.className === "encounter-1"){
-                encounterAdapter.displayNpcList(id)
-            } else if(e.target.className === "encounter-2"){
-                encounterAdapter.dispalyNpcList(id)
-            } else if(e.targer.className === "encounter-3"){
-                encounterAdapter.displayNpcList(id)
-            }
+        
+        let encounterHeader = document.getElementById('npcs-header')
+        if(e.target.className === "encounter-1"){
+            encounterHeader.innerHTML = 
+            "<h2 id='npc-header>Encounter 1 NPC's</h2>"
+        } else if(e.target.className === "encounter-2"){
+            encounterHeader.innerHTML = 
+            "<h2 id='npc-header>Encounter 2 NPC's</h2>"
+        } else if(e.target.className === "encounter-3"){
+            encounterHeader.innerHTML = 
+            "<h2 id='npc-header>Encounter 3 NPC's</h2>"
         }
     }
+}
+    
+    //working
+    // handleListClick = (e) => {
+    //     let id = e.target.dataset.id
+    //         if(e.target.className === "encounter-1"){
+    //             encounterAdapter.displayNpcList(id)
+    //         } else if(e.target.className === "encounter-2"){
+    //             encounterAdapter.dispalyNpcList(id)
+    //         } else if(e.targer.className === "encounter-3"){
+    //             encounterAdapter.displayNpcList(id)
+    //         }
+    //     }
+    // }

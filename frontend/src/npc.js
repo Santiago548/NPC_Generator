@@ -43,7 +43,7 @@ class Npc{
         this.element.addEventListener('click', this.handleListClick)
     }
 
-    attachToDom(){
+    attachToDomNpcList(){
         this.npcList.append(this.renderNpcList())
         this.addEventListeners() 
     }
