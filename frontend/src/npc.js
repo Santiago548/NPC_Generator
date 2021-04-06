@@ -51,7 +51,7 @@ class Npc{
     renderNpcList(){
         this.element.innerHTML = `
         <fieldset>
-        <span class="name">${this.name}</span><br>
+        <legend style="text-transform:uppercase" class="name"><b>${this.name}</b></legend>
         The <span class="alignment">${this.alignment}</span>
         <span class="sex">${this.sex}</span>
         <span class="race">${this.race}</span><br>
@@ -60,7 +60,7 @@ class Npc{
         ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
         <button class="delete" data-id="${this.id}">Delete</button>
         <button class="full-info" data-id="${this.id}">Full Info</button>
-        </fieldset>
+        </fieldset><br>
         `
         return this.element
     }
@@ -68,7 +68,7 @@ class Npc{
     displayNpc = (e) => {
         this.npcInfo.innerHTML = `
         <fieldset id="npc-full-info-${this.id}">
-        <span class="name">${this.name}</span><br>
+        <legend style="text-transform:uppercase" class="name"><b>${this.name}</b></legend>
         The <span class="alignment">${this.alignment}</span>
         <span class="sex">${this.sex}</span>
         <span class="race">${this.race}</span><br>
