@@ -75,23 +75,62 @@ class Npc{
         <br>
         HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
         ARMOR:
+        <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:'}
+        </span><br>
         <div id='shield-container'>
             <img id='image-shield' src='images/shield.png'>
-            <span id='text' class="armor">${(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}    
+            <span id='text-shield' class="armor-number">${(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}    
         </div>
-                <span id="text" class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}
-                </span><br>
-                <br>
         <b>WEAPONS:</b><br>
         MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
         RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
         <b>ABILITY SCORES:</b><br>
-        Strength +<span class="strength">${this.strength}</span><br>
-        Dexterity +<span class="dexterity">${this.dexterity}</span><br>
-        Constitution +<span class="constitution">${this.constitution}</span><br>
-        Wisdom +<span class="wisdom">${this.wisdom}</span><br>
-        Charisma +<span class="charisma">${this.charisma}</span><br>
-        <button class="hide-npc-full-info" data-id="${this.id}">Hide</button>
+        
+        <div id='ability-container'>
+            <div id='ability-str'>
+                Strength |
+            </div>
+
+            <div id='ability-dex'>
+                Dexterity |
+            </div>
+
+            <div id='ability-con'>
+                Constitution |
+            </div> 
+
+            <div id='ability-wis'>
+                Wisdom |
+            </div>
+            
+            <div id='ability-cha'>
+                Charisma
+            </div>
+        </div>
+                
+            <div id='ability-container'> 
+                <img id='image-str' src='images/strlogo.png'>
+            <div id='text-str' class="strength">
+                + ${this.strength}
+            </div>
+                <img id='image-dex' src='images/dexlogo.png'>
+            <div id='text-dex' class="dexterity">
+                + ${this.dexterity}
+            </div>
+            <img id='image-con' src='images/conlogo.png'>
+            <div id='text-con' class="constitution">
+                + ${this.constitution}
+            </div>
+            <img id='image-wis' src='images/wislogo.png'>
+            <div id='text-wis' class="wisdom">
+                + ${this.wisdom}
+            </div>
+            <img id='image-cha' src='images/chalogo.png'>
+            <div id='text-cha' class="charisma">
+                + ${this.charisma}</div>
+            </div>
+        </div>
+        // <button class="hide-npc-full-info" data-id="${this.id}">Hide</button>
         </fieldset>
         `
         return this.element

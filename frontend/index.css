@@ -56,6 +56,7 @@ fieldset {
   border-style: solid;
   border-color: black;
 }
+
 #column-headers {
   background-color: rgb(0, 0, 0);
   border-radius: 8px;
@@ -86,13 +87,16 @@ h2 {
 }
 
 
+
+/* armor class container */
+
 #shield-container {
   height: 40px;
   width: 30px;
   position: relative;
 }
 
-#text {
+#text-shield {
   z-index: 100;
   position: absolute;
   color: rgb(0, 0, 0);
@@ -107,4 +111,144 @@ h2 {
   width: 30px;
   left: 0;
   top: 0;
+}
+
+#ability-score{
+  /* border: #000000;
+  border-style: solid;
+  border-width: 1px; */
+}
+
+/* ability score containers */
+#ability-container {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+column-gap: 2px;
+row-gap: 0;
+border: 0;
+justify-items: center;
+grid-template-areas: 
+"ability-str ability-dex ability-con ability-wis ability-cha"
+"image-str image-dex image-con image-wis image-cha"
+"text-str text-dex text-con text-wis text-cha";
+}
+
+.ability-str{
+  grid-area: ability-str;
+}
+.ability-dex {
+  grid-area: ability-dex;
+}
+.ability-con {
+  grid-area: ability-con;
+}
+.ability-wis {
+  grid-area: ability-wis;
+}
+.ability-cha {
+  grid-area: ability-cha;
+}
+/* ability score containers */
+
+#image-str {
+  grid-area: image-str;
+  height: 80px;
+  width: 60px;
+}
+
+#text-str {
+  grid-area: text-str;
+  /* z-index: 100;
+  position: absolute; */
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#ability-str{
+}
+
+/* str ability score containers */
+
+#text-dex {
+  grid-area: text-dex;
+  /* z-index: 100;
+  position: absolute; */
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  /* left: 80px;
+  top: 32px; */
+}
+#image-dex {
+  grid-area: image-dex;
+  height: 80px;
+  width: 60px;
+}
+
+#ability-dex{
+}
+
+/* ability score containers */
+
+#text-con {
+  grid-area: text-con;
+  /* z-index: 100;
+  position: absolute; */
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  /* left: 145px;
+  top: 23px; */
+}
+#image-con {
+  grid-area: image-con;
+  height: 80px;
+  width: 60px;
+}
+
+#ability-con{
+}
+
+/* ability score containers */
+
+#text-wis {
+  grid-area: text-wis;
+  /* z-index: 100;
+  position: absolute; */
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  /* left: 220px;
+  top: 23px; */
+}
+#image-wis {
+  grid-area: image-wis;
+  height: 80px;
+  width: 60px;
+}
+
+#ability-wis{
+}
+
+/* ability score containers */
+
+#text-cha {
+  grid-area: text-cha;
+  /* z-index: 100;
+  position: absolute; */
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  /* left: 300px;
+  top: 23px; */
+}
+#image-cha {
+  grid-area: image-cha;
+  height: 80px;
+  width: 60px;
+}
+
+#ability-cha {
 }
