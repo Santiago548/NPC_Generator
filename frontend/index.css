@@ -32,7 +32,9 @@
 .header {
   background-image: url('images/headerbg.jpg');
   width: 100%;
-  height: 100px;
+  height: 150px;
+  background-position: 40% 40%;
+  background-size: cover;
 }
 
 hr {
@@ -81,4 +83,28 @@ h2 {
   background-color: rgb(175, 175, 175);
   padding: 8px;
   border-radius: 4px;
+}
+
+
+#shield-container {
+  height: 40px;
+  width: 30px;
+  position: relative;
+}
+
+#text {
+  z-index: 100;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  left: 6px;
+  top: 10px;
+}
+#image-shield {
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  left: 0;
+  top: 0;
 }

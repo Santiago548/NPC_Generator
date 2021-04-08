@@ -74,7 +74,14 @@ class Npc{
         <span class="race">${this.race}</span><br>
         <br>
         HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
-        ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
+        ARMOR:
+        <div id='shield-container'>
+            <img id='image-shield' src='images/shield.png'>
+            <span id='text' class="armor">${(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}    
+        </div>
+                <span id="text" class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}
+                </span><br>
+                <br>
         <b>WEAPONS:</b><br>
         MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
         RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
