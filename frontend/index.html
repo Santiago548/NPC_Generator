@@ -13,22 +13,28 @@
         <hr>
 
         <div class='gen-info'>
-                GENERATOR How To:<br>
-                Use the Create a New Npc form to create a new NPC for an encounter<br>
-                Click on one of the ENCOUNTER buttons to see all NPCs for an encounter<br>
-                Click on FULL INFO button to see NPC's stat card.
+            GENERATOR How To:<br>
+            Use the Create a New Npc form to create a new NPC for an encounter<br>
+            Click on one of the ENCOUNTER buttons to see all NPCs for an encounter<br>
+            Click on FULL INFO button to see NPC's stat card.
         </div>
         
         <div class="container">
         <div class='encountercolumn'>
-            <h2>Encounters</h2>
+            <div id='column-headers'>
+                <h2>Encounters</h2>
+            </div>
+            <br>
             <fieldset id="encounter-list">
             </fieldset>
         </div>
 
         <div class='npccolumnform'>
             <form id="npc-form">
-                <h2>Create a New NPC</h2>
+                <div id='column-headers'>
+                    <h2>Create a New NPC</h2>
+                </div>
+                <br>
                 <fieldset>
                 <div class='info-list'>
                     <h3>NPC Info:</h3>
@@ -49,42 +55,14 @@
                         <option value="Gnome">Gnome</option>
                         <option value="Half-Elf">Half-Elf</option>
                         <option value="Halfling">Halfling</option>
-                        <!-- <option value="Half-Orc">Half-Orc</option> -->
                         <option value="Human">Human</option>
                         <option value="Tiefling">Tiefling</option>
-                        <!-- <option value="Orc of Exandria">Orc of Exandria</option>
-                        <option value="Leonin">Leonin</option>
-                        <option value="Satyr">Satyr</option> -->
-                        <!-- <option value="Genasi">Genasi</option> -->
-                    <option value="Goliath">Goliath</option>
-                        <!-- <option value="Aasimar">Aasimar</option>
-                        <option value="Bugbear">Bugbear</option> -->
+                        <option value="Goliath">Goliath</option>
                         <option value="Firbolg">Firbolg</option>
                         <option value="Goblin">Goblin</option>
-                        <!-- <option value="Hobgoblin">Hobgoblin</option> -->
-                        <!-- <option value="Kenku">Kenku</option>
-                        <option value="Kobold">Kobold</option>
-                        <option value="Lizardfolk">Lizardfolk</option> -->
                         <option value="Orc">Orc</option>
                         <option value="Tabaxi">Tabaxi</option>
-                        <!-- <option value="Triton">Triton</option>
-                        <option value="Yuan-ti Pureblood">Yuan-ti Pureblood</option>
-                    <option value="Feral Tiefling">Feral Tiefling</option>
-                        <option value="Tortle">Tortle</option>
-                        <option value="Changeling">Changeling</option>
-                        <option value="Kalashtar">Kalashtar</option>
-                        <option value="Orc of Eberron">Orc of Eberron</option>
-                        <option value="Shifter">Shifter</option> -->
                         <option value="Warforged">Warforged</option>
-                        <!-- <option value="Gith">Gith</option>
-                        <option value="Centaur">Centaur</option>
-                        <option value="Loxodon">Loxodon</option>
-                        <option value="Minotaur">Minotaur</option>
-                        <option value="Simic hybrid">Simic Hybrid</option>
-                        <option value="Vedalken">Vedalken</option>
-                        <option value="Verdan">Verdan</option>
-                        <option value="Locathah">Locathah</option>
-                        <option value="Grung">Grung</option> -->
                     </select><br><br>
                     <label for="npc-sex">Sex:</label>
                     <select type='text' name='sex' id='npc-sex'>
@@ -238,13 +216,20 @@
             </div>
 
             <div class= "npccollection">
-                <h2 id='npcs-header'>Here is your NPCs</h2>
+                <div id='column-headers'>
+                    
+                    <h2 id='npcs-header'>Here is your NPCs</h2>
+            
+                </div>
+                <br>
                     <div id="npc-list">
                     </div>
             </div>
         
             <div class= "npcinfocolumn">
-                <h2>Here is your NPC</h2>
+                <div id='column-headers'>
+                    <h2>Here is your NPC</h2>
+                </div>
                     <div id="npc-full-info">
                     </div>
             </div>
