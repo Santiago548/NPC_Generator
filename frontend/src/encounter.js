@@ -48,7 +48,7 @@ class Encounter{
         let encounterHeader = document.getElementById('npcs-header')
         let id = e.target.id
         if(id == "encounter-1"){
-            encounterHeader.innerHTML = 
+            encounterHeader.innerHTML =
             "<h2 id='npcs-header'>Encounter 1 NPC's</h2>"
         } else if(id == "encounter-2"){
             encounterHeader.innerHTML = 
