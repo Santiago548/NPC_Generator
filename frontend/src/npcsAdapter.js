@@ -94,8 +94,88 @@ class NpcsAdapter{
         let npcFullInfo = document.getElementById(`npc-full-info-${id}`)
         npcFullInfo.remove()
     }
-
 }
+    // random function
+    let raceArray = [
+        "Dragonborn",
+        "Dwarf",
+        "Elf",
+        "Gnome",
+        "Half-Elf",
+        "Halfling",
+        "Human",
+        "Tiefling",
+        "Goliath",
+        "Firbolg",
+        "Goblin",
+        "Orc",
+        "Tabaxi",
+        "Warforged"
+    ]
+    let sexArray = ["Male", "Female", "Non-Binary"]
+    let alignmentArray = [
+        "lawful Good",
+        "Neutral Good",
+        "Chaotic Good",
+        "Lawful Neutral",
+        "True Neutral",
+        "Chaotic Neutral",
+        "Lawful Evil",
+        "Neutral Evil",
+        "Chaotic Evil"
+    ]
+    let healthArray = [
+        10,
+        15,
+        20,
+        25,
+        30
+    ]
+    let armorArray = [
+        "Padded 11",
+        "Leather 11",
+        "Studded Leather 12",
+        "Hide 12",
+        "Chain-Shirt 13",
+        "Scale-Mail 14",
+        "Spiked-Armor 14",
+        "Breatplate 14",
+        "Halfplate 15",
+        "Ring-Mail 14",
+        "Chain-Mail 16",
+        "Splint 17",
+        "Plate 18"
+    ]
+    let meleeArray = [
+        "Battle Axe [1d8 Slashing]",
+        "Club [1d4 Bludgeoning]",
+        "Dagger [1d4 piercing]",
+        "Greataxe [1d12 Slashing]",
+        "Great Club [1d8 Bludgeoning]",
+        "Hand Axe [1d6 Slashing]",
+        "Long Sword [1d8 Slashing]",
+        "Quarterstaff [1d6 Bludgeoning]",
+        "Rapier [1d8 Piercing]",
+        "Scimitar [1d6 Slashing]",
+        "Short Sword [1d6 Slashing]"
+    ]
+    let rangeArray = [
+        "Blowgun [1 Piercing Range (25/100)]",
+        "Light Crossbow [1D8 Piercing Range(80/320)]",
+        "Dart [1D4 Piercing Range(20/60)]",
+        "Shortbow [1D6 piercing Range(80/320)]",
+        "Sling [1D4 piercing Range(30/120) ]",
+        "Hand Crossbow [1D6 Piercing Range(30/120)]",
+        "Heavy Crossbow [1D10 piercing Range(100/400)]",
+        "Longbow [1D8 piercing Range(150/600)]"
+    ]
+    let strArray = [1, 2, 3, 4 ,5, 6]
+    let dexArray = [1, 2, 3, 4 ,5, 6]
+    let conArray = [1, 2, 3, 4 ,5, 6]
+    let wisArray = [1, 2, 3, 4 ,5, 6]
+    let chaArray = [1, 2, 3, 4 ,5, 6]
+
+
 
 
 
