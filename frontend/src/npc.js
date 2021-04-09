@@ -78,8 +78,8 @@ class Npc{
         <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:'}
         </span><br>
         <div id='shield-container'>
-            <img id='image-shield' src='images/shield.png'>
-            <span id='text-shield' class="armor-number">${(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}    
+        <img id='image-shield' src='images/shield.png'>
+        <span id='text-shield' class="armor-number">${(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}    
         </div>
         <b>WEAPONS:</b><br>
         MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
@@ -90,25 +90,22 @@ class Npc{
             <div id='ability-str'>
                 Strength |
             </div>
-
             <div id='ability-dex'>
                 Dexterity |
             </div>
-
             <div id='ability-con'>
                 Constitution |
             </div> 
-
             <div id='ability-wis'>
                 Wisdom |
             </div>
-            
             <div id='ability-cha'>
                 Charisma
             </div>
         </div>
-                
-            <div id='ability-container'> 
+        
+        <div ='npc-container'>
+        <div id='ability-container'> 
                 <img id='image-str' src='images/strlogo.png'>
             <div id='text-str' class="strength">
                 + ${this.strength}
@@ -117,7 +114,7 @@ class Npc{
             <div id='text-dex' class="dexterity">
                 + ${this.dexterity}
             </div>
-            <img id='image-con' src='images/conlogo.png'>
+                <img id='image-con' src='images/conlogo.png'>
             <div id='text-con' class="constitution">
                 + ${this.constitution}
             </div>
@@ -125,13 +122,14 @@ class Npc{
             <div id='text-wis' class="wisdom">
                 + ${this.wisdom}
             </div>
-            <img id='image-cha' src='images/chalogo.png'>
+                <img id='image-cha' src='images/chalogo.png'>
             <div id='text-cha' class="charisma">
                 + ${this.charisma}</div>
             </div>
-        </div>
-        // <button class="hide-npc-full-info" data-id="${this.id}">Hide</button>
+            <button class="hide-npc-full-info" data-id="${this.id}">Hide</button>
+            </div>
         </fieldset>
+        </div>
         `
         return this.element
     }

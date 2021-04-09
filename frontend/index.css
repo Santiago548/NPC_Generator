@@ -113,11 +113,8 @@ h2 {
   top: 0;
 }
 
-#ability-score{
-  /* border: #000000;
-  border-style: solid;
-  border-width: 1px; */
-}
+/* #ability-score{
+} */
 
 /* ability score containers */
 #ability-container {
@@ -158,28 +155,25 @@ grid-template-areas:
 }
 
 #text-str {
-  grid-area: text-str;
-  /* z-index: 100;
-  position: absolute; */
+  z-index: 100;
+  position: absolute;
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-}
-
-#ability-str{
+  left: 1134px;
+  top: 631px;
 }
 
 /* str ability score containers */
 
 #text-dex {
-  grid-area: text-dex;
-  /* z-index: 100;
-  position: absolute; */
+  z-index: 100;
+  position: absolute;
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  /* left: 80px;
-  top: 32px; */
+  left: 1204px;
+  top: 631px;
 }
 #image-dex {
   grid-area: image-dex;
@@ -187,20 +181,16 @@ grid-template-areas:
   width: 60px;
 }
 
-#ability-dex{
-}
-
 /* ability score containers */
 
 #text-con {
-  grid-area: text-con;
-  /* z-index: 100;
-  position: absolute; */
+  z-index: 100;
+  position: absolute;
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  /* left: 145px;
-  top: 23px; */
+  left: 1273px;
+  top: 631px;
 }
 #image-con {
   grid-area: image-con;
@@ -208,47 +198,44 @@ grid-template-areas:
   width: 60px;
 }
 
-#ability-con{
-}
-
 /* ability score containers */
 
 #text-wis {
-  grid-area: text-wis;
-  /* z-index: 100;
-  position: absolute; */
+  z-index: 100;
+  position: absolute;
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  /* left: 220px;
-  top: 23px; */
+  left: 1341px;
+  top: 631px;
 }
+
 #image-wis {
   grid-area: image-wis;
   height: 80px;
   width: 60px;
 }
 
-#ability-wis{
-}
-
 /* ability score containers */
 
 #text-cha {
-  grid-area: text-cha;
-  /* z-index: 100;
-  position: absolute; */
+  z-index: 100;
+  position: absolute;
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  /* left: 300px;
-  top: 23px; */
+  left: 1410px;
+  top: 631px;
 }
+
 #image-cha {
   grid-area: image-cha;
   height: 80px;
   width: 60px;
 }
 
-#ability-cha {
+#npc-container {
+  height: 384px;
+  width: 377px;
+  position: relative;
 }
