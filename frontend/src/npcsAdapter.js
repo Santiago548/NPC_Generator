@@ -13,9 +13,60 @@ class NpcsAdapter{
                 npc.attachToDomNpcList(el)
             })
         })
-        
-
     }
+/////////////////////////////////////////////////////////////////////////////////////////
+    handleRandomSubmit = (e) => {
+        e.preventDefault()
+        const name =
+        const race =
+        const sex =
+        const alignment = 
+        const melee =
+        const ranged =
+        const health =
+        const armor =
+        const strength =
+        const desxterity =
+        const constitution =
+        const wisdom =
+        const charisma =
+        const encounter_id =
+
+        let newNpc = {
+            name,
+            race,
+            sex,
+            alignment,
+            melee,
+            ranged,
+            health,
+            armor,
+            strength,
+            dexterity,
+            constitution,
+            wisdom,
+            charisma,
+            encounter_id
+        }
+        let configNpc = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(newNpc)
+        }
+
+        fetch(this.baseUrl, configNpc)
+        .then(res => res.json())
+        .then(json => {
+            let npc = new Npc(json.data.attributes)
+            npc.attachToDomNpcList() 
+        })
+
+        npcForm.reset()
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
 
     handleFormSubmit = (e) => {
         e.preventDefault()
@@ -68,7 +119,6 @@ class NpcsAdapter{
         })
 
         npcForm.reset()
-
     }
 
     // delete function
