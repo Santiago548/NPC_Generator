@@ -14,19 +14,36 @@
   grid-area: npcshow;
 }
 
+.randomrow {
+  grid-area: random;
+}
+
+.border {
+  grid-area: bordercolumn;
+}
+
 .container {
   background-image: url('images/dndbackground.jpg');
   display: grid;
-  grid-template-columns: 10% 30% 30% 30%;
+  grid-template-columns: 1% 24% 24% 24% 27%;
   grid-template-rows: auto;
   /* column-gap: 6px; */
   row-gap: 10px;
   justify-items: center;
+  /* justify-content: space-evenly; */
   grid-template-areas: 
-  "header header header header"
-  "encounter npcform npccollection npcshow"
-  "encounter npcform npccollection npcshow"
-  "encounter npcform npccollection npcshow";
+  "bordercolumn header header header header "
+  "bordercolumn encounter npcform npccollection npcshow"
+  "bordercolumn random npcform npccollection npcshow"
+  "bordercolumn random npcform npccollection npcshow";
+}
+
+#randomButton {
+    text-align: center;
+    height: 35%;
+    width: 35%;
+    padding: 0;
+    margin: 0;
 }
 
 .header {
@@ -55,6 +72,7 @@ fieldset {
   border-radius: 8px;
   border-style: solid;
   border-color: black;
+  text-align: center;
 }
 
 #column-headers {
@@ -86,14 +104,15 @@ h2 {
   border-radius: 4px;
 }
 
-
-
 /* armor class container */
 
 #shield-container {
   height: 40px;
   width: 30px;
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #text-shield {
@@ -109,8 +128,11 @@ h2 {
   position: absolute;
   height: 40px;
   width: 30px;
-  left: 0;
-  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* left: 140px;
+  top: 0; */
 }
 
 /* #ability-score{
@@ -160,7 +182,7 @@ grid-template-areas:
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  left: 1134px;
+  left: 1155px;
   top: 631px;
 }
 
@@ -172,7 +194,7 @@ grid-template-areas:
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  left: 1204px;
+  left: 1225px;
   top: 631px;
 }
 #image-dex {
@@ -189,7 +211,7 @@ grid-template-areas:
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  left: 1273px;
+  left: 1293px;
   top: 631px;
 }
 #image-con {
@@ -206,7 +228,7 @@ grid-template-areas:
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  left: 1341px;
+  left: 1364px;
   top: 631px;
 }
 
@@ -224,7 +246,7 @@ grid-template-areas:
   color: rgb(0, 0, 0);
   font-size: 18px;
   font-weight: bold;
-  left: 1410px;
+  left: 1434px;
   top: 631px;
 }
 

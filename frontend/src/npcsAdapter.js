@@ -113,6 +113,7 @@ class NpcsAdapter{
         "Warforged"
     ]
     let sexArray = ["Male", "Female", "Non-Binary"]
+
     let alignmentArray = [
         "lawful Good",
         "Neutral Good",
@@ -176,9 +177,18 @@ class NpcsAdapter{
     let chaArray = [1, 2, 3, 4 ,5, 6]
 
 
-
-
-
+    const randomRace = Math.floor(Math.random() * raceArray.length)
+    const randomSex = Math.floor(Math.random() * sexArray.length)
+    const randomAlignment = Math.floor(Math.random() * alignmentArray.length)
+    const randomHealth = Math.floor(Math.random() * healthArray.length)
+    const randomArmor = Math.floor(Math.random() * armorArray.length)
+    const randomMelee = Math.floor(Math.random() * meleeArray.length)
+    const randomRanged = Math.floor(Math.random() * rangeArray.length)
+    const randomStr = Math.floor(Math.random() * strArray.length)
+    const randomDex = Math.floor(Math.random() * dexArray.length)
+    const randomCon = Math.floor(Math.random() * conArray.length)
+    const randomWis = Math.floor(Math.random() * wisArray.length)
+    const randomCha = Math.floor(Math.random() * chaArray.length)
 // sendPatchRequest(npcId){
 //     const name = document.getElementById(`update-name-${npcId}`).value
 //     const race = document.getElementById(`update-race-${npcId}`).value
