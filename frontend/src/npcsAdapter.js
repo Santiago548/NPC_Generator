@@ -17,20 +17,20 @@ class NpcsAdapter{
 /////////////////////////////////////////////////////////////////////////////////////////
     handleRandomSubmit = (e) => {
         e.preventDefault()
-        const name =
-        const race =
-        const sex =
-        const alignment = 
-        const melee =
-        const ranged =
-        const health =
-        const armor =
-        const strength =
-        const desxterity =
-        const constitution =
-        const wisdom =
-        const charisma =
-        const encounter_id =
+        const name = document.getElementById('npc-name-random').value
+        const race = randomRace
+        const sex = randomSex
+        const alignment = randomAlignment
+        const melee = randomMelee
+        const ranged = randomRanged
+        const health = randomHealth
+        const armor = randomArmor
+        const strength = randomStr
+        const dexterity = randomDex
+        const constitution = randomCon
+        const wisdom = randomWis
+        const charisma = randomCha
+        const encounter_id = document.getElementById('encounter_id_random').value
 
         let newNpc = {
             name,
@@ -239,6 +239,7 @@ class NpcsAdapter{
     const randomCon = Math.floor(Math.random() * conArray.length)
     const randomWis = Math.floor(Math.random() * wisArray.length)
     const randomCha = Math.floor(Math.random() * chaArray.length)
+
 // sendPatchRequest(npcId){
 //     const name = document.getElementById(`update-name-${npcId}`).value
 //     const race = document.getElementById(`update-race-${npcId}`).value
