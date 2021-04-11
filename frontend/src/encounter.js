@@ -7,6 +7,8 @@ class Encounter{
         this.element = document.createElement('h4')
         this.element.id = `encounter-${id}`
         this.encounterList = document.getElementById('encounter-list')
+        this.encounterList2 = document.getElementById('encounter-list-2')
+        this.encounterList3 = document.getElementById('encounter-list-3')
         this. sorted = false
 
         Encounter.all.push(this)
@@ -26,14 +28,22 @@ class Encounter{
         
     attachToDom(){
         this.encounterList.append(this.render())
+        this.encounterList2.append(this.render())
+        this.encounterList3.append(this.render())
         this.addEventListeners()
     }
         
     render(){
-        this.element.innerHTML = `
-        <button id="encounter-${this.id}" type="button">${this.name}</button>
+        this.encounterList.innerHTML = `
+        <button id="encounter-1" type="button">Encounter 1</button>
         `
-        return this.element
+        this.encounterList2.innerHTML = `
+        <button id="encounter-2" type="button">Encounter 2</button>
+        `
+        this.encounterList3.innerHTML = `
+        <button id="encounter-3" type="button">Encounter 3</button>
+        `
+        return this.encounterList
     }
         
     //working functionallity fully
