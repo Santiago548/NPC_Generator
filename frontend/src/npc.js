@@ -126,7 +126,6 @@ class Npc{
             <div id='text-cha' class="charisma">
                 + ${this.charisma}</div>
             </div>
-            <button class="hide-npc-full-info" data-id="${this.id}">Hide</button>
             </div>
         </fieldset>
         </div>
@@ -140,86 +139,79 @@ class Npc{
            npcAdapter.deleteNpc(id)
        } else if (e.target.className === 'full-info'){
            this.displayNpc(id)
-       } else if (e.target.className === 'hide-npc-full-info'){
-           this.hideNpcFullInfo()
        }
    }
 
-   hideNpcFullInfo(){
-    let npcel = document.getElementById("hide-npc-full-info")
-    npcel.innerHTML = ""
-   }
-
-   armorFormat() {
-    if(this.armor == "Padded 11") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-    } else if(this.armor == "Leather 11") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-    } else if(this.armor == "Studded Leather 12") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//    armorFormat() {
+//     if(this.armor == "Padded 11") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//     } else if(this.armor == "Leather 11") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//     } else if(this.armor == "Studded Leather 12") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
    
-    } else if(this.armor == "Hide 12") {
-        if(this.dexterity == 1) {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else if(this.dexterity == 2){
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
-        }
+//     } else if(this.armor == "Hide 12") {
+//         if(this.dexterity == 1) {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else if(this.dexterity == 2){
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
+//         }
         
-    } else if(this.armor == "Chain-Shirt 13") {
-        if(this.dexterity == 1) {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else if(this.dexterity == 2){
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
-        }
+//     } else if(this.armor == "Chain-Shirt 13") {
+//         if(this.dexterity == 1) {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else if(this.dexterity == 2){
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
+//         }
 
-    } else if(this.armor == "Scale-Mail 14") {
-        if(this.dexterity == 1) {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else if(this.dexterity == 2){
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
-        }
+//     } else if(this.armor == "Scale-Mail 14") {
+//         if(this.dexterity == 1) {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else if(this.dexterity == 2){
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
+//         }
 
-    } else if(this.armor == "Spiked-Armor 14") {
-        if(this.dexterity == 1) {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else if(this.dexterity == 2){
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
-        }
+//     } else if(this.armor == "Spiked-Armor 14") {
+//         if(this.dexterity == 1) {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else if(this.dexterity == 2){
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
+//         }
 
-    } else if(this.armor == "Breatplate 14") {
-        if(this.dexterity == 1) {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else if(this.dexterity == 2){
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
-        }
+//     } else if(this.armor == "Breatplate 14") {
+//         if(this.dexterity == 1) {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else if(this.dexterity == 2){
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
+//         }
         
-    } else if(this.armor == "Halfplate 15") {
-        if(this.dexterity == 1) {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else if(this.dexterity == 2){
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
-        } else {
-            this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
-        }
-    } else if(this.armor == "Ring-Mail 14") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
-    } else if(this.armor == "Chain-Mail 16") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
-    } else if(this.armor == "Splint 17") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
-    } else if(this.armor == "Plate 18") {
-        this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
-    }
-}
+//     } else if(this.armor == "Halfplate 15") {
+//         if(this.dexterity == 1) {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else if(this.dexterity == 2){
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + this.dexterity)
+//         } else {
+//             this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)) + 2)
+//         }
+//     } else if(this.armor == "Ring-Mail 14") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
+//     } else if(this.armor == "Chain-Mail 16") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
+//     } else if(this.armor == "Splint 17") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
+//     } else if(this.armor == "Plate 18") {
+//         this.armor.split(' ').slice(0, 1) + ' ' + "AC" + (parseInt(this.armor.split(' ').slice(1)))
+//     }
+// }
 
 }

@@ -1,9 +1,6 @@
 .header {
   grid-area: header
 }
-.encountercolumn {
-  grid-area: encounter;
-}
 .npccolumnform {
   grid-area: npcform;
 }
@@ -13,11 +10,9 @@
 .npcinfocolumn {
   grid-area: npcshow;
 }
-
 .randomrow {
   grid-area: random;
 }
-
 .border {
   grid-area: bordercolumn;
 }
@@ -30,12 +25,34 @@
   /* column-gap: 6px; */
   row-gap: 10px;
   justify-items: center;
-  /* justify-content: space-evenly; */
   grid-template-areas: 
   "bordercolumn header header header header "
-  "bordercolumn encounter npcform npccollection npcshow"
+  "bordercolumn random npcform npccollection npcshow"
   "bordercolumn random npcform npccollection npcshow"
   "bordercolumn random npcform npccollection npcshow";
+}
+
+#encounter-1 {
+  grid-area: encounter-1;
+}
+
+#encounter-2 {
+  grid-area: encounter-2;
+}
+
+#encounter-3 {
+  grid-area: encounter-3;
+}
+
+.buttonContainer {
+  background-image: url('images/dndbackground.jpg');
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  justify-items: center;
+  grid-template-areas: 
+  "encounter-1 encounter-2 encounter-3";
 }
 
 #randomButton {
@@ -89,6 +106,7 @@ legend {
   color: #D4AF37;
   border-style: solid;
   border-width: 1px;
+  text-align: left;
 }
 
 h2 {
@@ -131,12 +149,11 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* left: 140px;
-  top: 0; */
 }
 
-/* #ability-score{
-} */
+#encounter-list {
+  background-color: black;
+}
 
 /* ability score containers */
 #ability-container {

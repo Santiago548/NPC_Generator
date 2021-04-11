@@ -14,7 +14,7 @@ class NpcsAdapter{
             })
         })
     }
-/////////////////////////////////////////////////////////////////////////////////////////
+//random function form submit
     handleRandomSubmit = (e) => {
         e.preventDefault()
 
@@ -170,8 +170,6 @@ class NpcsAdapter{
         npcFullInfo.remove()
     }
 }
-    // random function
-    
 
 // sendPatchRequest(npcId){
 //     const name = document.getElementById(`update-name-${npcId}`).value
