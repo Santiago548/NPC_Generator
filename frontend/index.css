@@ -32,16 +32,26 @@
   "bordercolumn random npcform npccollection npcshow";
 }
 
+#encounter-list {
+  grid-area: encounter;
+}
+
 #encounter-1 {
   grid-area: encounter-1;
+  grid-row: 1 ;
+  grid-column: 1;
 }
 
 #encounter-2 {
   grid-area: encounter-2;
+  grid-row: 1 ;
+  grid-column: 2;
 }
 
 #encounter-3 {
   grid-area: encounter-3;
+  grid-row: 1 ;
+  grid-column: 3;
 }
 
 .buttonContainer {
@@ -49,10 +59,10 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  row-gap: 10px;
-  justify-items: center;
+  /* row-gap: 10px; */
+  justify-items: stretch;
   grid-template-areas: 
-  "encounter-1 encounter-2 encounter-3";
+  "encounter encounter encounter";
 }
 
 #randomButton {
