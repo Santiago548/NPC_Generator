@@ -31,31 +31,18 @@ class NpcsAdapter{
         const wisArray = ["1", "2", "3", "4" ,"5", "6"]
         const chaArray = ["1", "2", "3", "4" ,"5", "6"]
 
-        const randomRace = Math.floor(Math.random() * raceArray.length)
-        const randomSex = Math.floor(Math.random() * sexArray.length)
-        const randomAlignment = Math.floor(Math.random() * alignmentArray.length)
-        const randomHealth = Math.floor(Math.random() * healthArray.length)
-        const randomArmor = Math.floor(Math.random() * armorArray.length)
-        const randomMelee = Math.floor(Math.random() * meleeArray.length)
-        const randomRanged = Math.floor(Math.random() * rangeArray.length)
-        const randomStr = Math.floor(Math.random() * strArray.length)
-        const randomDex = Math.floor(Math.random() * dexArray.length)
-        const randomCon = Math.floor(Math.random() * conArray.length)
-        const randomWis = Math.floor(Math.random() * wisArray.length)
-        const randomCha = Math.floor(Math.random() * chaArray.length)
-
-        // console.log(randomRace, raceArray[randomRace])
-        // console.log(randomSex, sexArray[randomSex])
-        // console.log(randomAlignment, alignmentArray[randomAlignment])
-        // console.log(randomHealth, healthArray[randomHealth])
-        // console.log(randomArmor, armorArray[randomArmor])
-        // console.log(randomMelee, meleeArray[randomMelee])
-        // console.log(randomRanged, rangeArray[randomRanged])
-        // console.log(randomStr, strArray[randomStr])
-        // console.log(randomDex, dexArray[randomDex])
-        // console.log(randomCon, conArray[randomCon])
-        // console.log(randomWis, wisArray[randomWis])
-        // console.log(randomCha, chaArray[randomCha])
+        const randomRace = raceArray[Math.floor(Math.random() * raceArray.length)]
+        const randomSex = sexArray[Math.floor(Math.random() * sexArray.length)]
+        const randomAlignment = alignmentArray[Math.floor(Math.random() * alignmentArray.length)]
+        const randomHealth = healthArray[Math.floor(Math.random() * healthArray.length)]
+        const randomArmor = armorArray[Math.floor(Math.random() * armorArray.length)]
+        const randomMelee = meleeArray[Math.floor(Math.random() * meleeArray.length)]
+        const randomRanged = rangeArray[Math.floor(Math.random() * rangeArray.length)]
+        const randomStr = strArray[Math.floor(Math.random() * strArray.length)]
+        const randomDex = dexArray[Math.floor(Math.random() * dexArray.length)]
+        const randomCon = conArray[Math.floor(Math.random() * conArray.length)]
+        const randomWis = wisArray[Math.floor(Math.random() * wisArray.length)]
+        const randomCha = chaArray[Math.floor(Math.random() * chaArray.length)]
 
         const name = document.getElementById('npc-name-random').value
         const race = randomRace
