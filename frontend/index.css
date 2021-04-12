@@ -59,7 +59,7 @@
 
 hr {
   background-color: #D4AF37;
-  border-top: 2px solid  #D4AF37;
+  border-top: 2px solid ;
   line-height: 20px;
 }
 
@@ -93,6 +93,7 @@ legend {
   border-style: solid;
   border-width: 1px;
   text-align: left;
+  padding: 2px;
 }
 
 h2 {
@@ -185,7 +186,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1155px;
-  top: 648px;
+  top: 655px;
 }
 
 /* str ability score containers */
@@ -197,7 +198,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1225px;
-  top: 648px;
+  top: 655px;
 }
 #image-dex {
   grid-area: image-dex;
@@ -205,7 +206,7 @@ grid-template-areas:
   width: 60px;
 }
 
-/* ability score containers */
+/* con ability score containers */
 
 #text-con {
   z-index: 100;
@@ -214,7 +215,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1293px;
-  top: 648px;
+  top: 655px;
 }
 #image-con {
   grid-area: image-con;
@@ -222,7 +223,7 @@ grid-template-areas:
   width: 60px;
 }
 
-/* ability score containers */
+/* wis ability score containers */
 
 #text-wis {
   z-index: 100;
@@ -231,7 +232,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1364px;
-  top: 648px;
+  top: 655px;
 }
 
 #image-wis {
@@ -240,7 +241,7 @@ grid-template-areas:
   width: 60px;
 }
 
-/* ability score containers */
+/* cha ability score containers */
 
 #text-cha {
   z-index: 100;
@@ -249,7 +250,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1434px;
-  top: 648px;
+  top: 655px;
 }
 
 #image-cha {
@@ -264,9 +265,10 @@ grid-template-areas:
   position: relative;
 }
 
+/* button styling for encounters */
 .button {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 2px 15px;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
@@ -274,7 +276,7 @@ grid-template-areas:
   outline: none;
   color: gold;
   background-color: black;
-  border: none;
+  border: solid;
   border-radius: 20px;
   box-shadow: 0 9px #999;
 }
