@@ -56,6 +56,8 @@ class Npc{
         <span class="sex">${this.sex}</span>
         <span class="race">${this.race}</span><br>
         <br>
+        Encounter ID:<span class='encounter_id'>${this.encounter_id}</span>
+        <br>
         HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
         ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
         <button class="delete" data-id="${this.id}">Delete</button>

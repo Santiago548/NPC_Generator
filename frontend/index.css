@@ -16,47 +16,29 @@
 .border {
   grid-area: bordercolumn;
 }
+.encounter-column {
+  grid-area: encounterColumn;
+}
 
 .container {
   background-image: url('images/dndbackground.jpg');
   display: grid;
   grid-template-columns: 1% 24% 24% 24% 27%;
   grid-template-rows: auto;
-  /* column-gap: 6px; */
   row-gap: 10px;
   justify-items: center;
   grid-template-areas: 
   "bordercolumn header header header header "
   "bordercolumn random npcform npccollection npcshow"
-  "bordercolumn random npcform npccollection npcshow"
-  "bordercolumn random npcform npccollection npcshow";
+  "bordercolumn encounterColumn npcform npccollection npcshow"
+  "bordercolumn . npcform npccollection npcshow";
 }
 
-/* #encounter-list {
-  grid-area: encounter;
-} */
-
-#encounter-1 {
-  grid-area: encounter-1;
-}
-
-#encounter-2 {
-  grid-area: encounter-2;
-}
-
-#encounter-3 {
-  grid-area: encounter-3;
-}
-
-.buttonContainer {
-  background-image: url('images/dndbackground.jpg');
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  /* row-gap: 10px; */
-  justify-items: center;
-  grid-template-areas: 
-  "encounter-1 encounter-2 encounter-3";
+#encounter-list {
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  
 }
 
 #randomButton {
@@ -76,8 +58,8 @@
 }
 
 hr {
-  background-color: gray;
-  border-top: 2px solid rgb(0, 0, 0);
+  background-color: #D4AF37;
+  border-top: 2px solid  #D4AF37;
   line-height: 20px;
 }
 
@@ -121,9 +103,12 @@ h2 {
 }
 
 .gen-info {
-  background-color: rgb(175, 175, 175);
+  background-color: rgb(0, 0, 0);
   padding: 8px;
   border-radius: 4px;
+  border-style: solid;
+  border-color: #D4AF37;
+  color: #D4AF37;
 }
 
 /* armor class container */
@@ -153,10 +138,6 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-#encounter-list {
-  background-color: black;
 }
 
 /* ability score containers */
@@ -281,4 +262,28 @@ grid-template-areas:
   height: 384px;
   width: 377px;
   position: relative;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: gold;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: red}
+
+.button:active {
+  background-color: gold;
+  color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
