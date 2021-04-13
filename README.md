@@ -94,9 +94,9 @@ Here's a blank template to get started:
 
 ### Built With
 
-* [](Ruby)ruby
-* [](Javasctipt)javascript
-* []()
+* []()Ruby 2.6.1
+* []()Rails 6.1.3
+* []()Javascript
 
 
 
@@ -104,7 +104,14 @@ Here's a blank template to get started:
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-
+* []()bundle install all gem files
+```sh
+rails db:migrate
+```
+* []() To Start the Server
+```sh
+rails s
+```
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
