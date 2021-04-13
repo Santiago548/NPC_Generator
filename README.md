@@ -124,23 +124,17 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Santiago548/NPC_Generator
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+Use this application to quickly create NPC's for you DUngeons & Dragons 5E Campaign. you can save up to three encounters. NPCs can be created with Random abilities and stats or you can create one picking every ability and stat to better fit your needs.
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -172,7 +166,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@TechDom2](https://twitter.com/TechDom2) - email
+Your Name - Dominic Barajas
+Twitter - [@TechDom2](https://twitter.com/TechDom2) 
+Email - [dominicbarajas548@gmail.com] 
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
