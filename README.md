@@ -68,13 +68,18 @@ Thank you checking it out and for any help you can give in improving functionaly
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-* []()bundle install all gem files
+* []()install all gem files
 ```sh
-rails db:migrate
+$ bundle install
+```
+* []() migrate and seed the database
+```sh
+$ rails db:migrate
+$ rails db:seed
 ```
 * []() To Start the Server
 ```sh
-rails s
+$ rails s
 ```
 ### Installation
 
