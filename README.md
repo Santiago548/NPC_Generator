@@ -94,8 +94,8 @@ Here's a blank template to get started:
 
 ### Built With
 
-* [](Ruby)
-* [](Javasctipt)
+* [](Ruby)ruby
+* [](Javasctipt)javascript
 * []()
 
 
