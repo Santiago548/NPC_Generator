@@ -1,33 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** Santiago548, repo_name, twitter_handle, email, project_title, project_description
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -44,8 +14,8 @@
     <a href="https://github.com/Santiago548/NPC_Generator"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Santiago548/NPC_Generator">View Demo</a>
-    ·
+    <!-- <a href="https://github.com/Santiago548/NPC_Generator">View Demo</a>
+    · -->
     <a href="https://github.com/Santiago548/NPC_Generator/issues">Report Bug</a>
     ·
     <a href="https://github.com/Santiago548/NPC_Generator/issues">Request Feature</a>
@@ -67,16 +37,13 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -85,18 +52,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`Santiago548`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
+Use this application to quickly create NPC's for you Dungeons & Dragons 5E Campaign. you can save up to three encounters. NPCs can be created with Random abilities and stats or you can create one picking every ability and stat to better fit your needs.
 
 ### Built With
 
 * []()Ruby 2.6.1
 * []()Rails 6.1.3
 * []()Javascript
+* []()HTML
+* []()CSS
 
 
 
@@ -112,14 +76,6 @@ rails db:migrate
 ```sh
 rails s
 ```
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
 1. Clone the repo
@@ -130,11 +86,6 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this application to quickly create NPC's for you DUngeons & Dragons 5E Campaign. you can save up to three encounters. NPCs can be created with Random abilities and stats or you can create one picking every ability and stat to better fit your needs.
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -160,42 +111,12 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
+S
 <!-- CONTACT -->
 ## Contact
 
 Your Name - Dominic Barajas
 Twitter - [@TechDom2](https://twitter.com/TechDom2) 
-Email - [dominicbarajas548@gmail.com] 
+Email - dominicbarajas548@gmail.com 
 
 Project Link: [https://github.com/Santiago548/repo_name](https://github.com/Santiago548/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Santiago548/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/Santiago548/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Santiago548/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/Santiago548/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/Santiago548/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/Santiago548/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Santiago548/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/Santiago548/repo/issues
-[license-shield]: https://img.shields.io/github/license/Santiago548/repo.svg?style=for-the-badge
-[license-url]: https://github.com/Santiago548/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/Santiago548
