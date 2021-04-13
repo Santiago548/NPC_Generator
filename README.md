@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="frontend/images/npclogo.png" alt="Logo" width="80" height="80">
+    <img src="frontend/images/npclogo.png" alt="Logo" width="400" height="200">
   </a>
 
   <h3 align="center">NPC Generator</h3>
@@ -94,8 +94,8 @@ Here's a blank template to get started:
 
 ### Built With
 
-* []()
-* []()
+* [](Ruby)
+* [](Javasctipt)
 * []()
 
 
