@@ -24,13 +24,7 @@ class NpcsController < ApplicationController
         npc.destroy
         render json: {message: "#{npc.name} has been deleted!"}
     end
-
-    # def update
-    #     npc = Npc.find(params[:id])
-    #     npc.update(npc_params)
-    #     render json: NpcSerializer.new(npc)
-    # end
-
+    
     private
 
     def npc_params
