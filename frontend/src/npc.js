@@ -84,8 +84,10 @@ class Npc{
         <span id='text-shield' class="armor-number">${(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}    
         </div>
         <b>WEAPONS:</b><br>
-        MELEE: <span class="melee">${this.melee} + ${this.strength}</span> <br>
-        RANGED: <span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
+        MELEE:
+        <br><span class="melee">${this.melee} + ${this.strength}</span> <br>
+        RANGED: 
+        <br><span class="ranged">${this.ranged} + ${this.dexterity}</span><br><br>
         <b>ABILITY SCORES:</b><br>
         
         <div id='ability-container'>

@@ -186,7 +186,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1155px;
-  top: 655px;
+  top: 690px;
 }
 
 /* str ability score containers */
@@ -198,7 +198,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1225px;
-  top: 655px;
+  top: 690px;
 }
 #image-dex {
   grid-area: image-dex;
@@ -215,7 +215,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1293px;
-  top: 655px;
+  top: 690px;
 }
 #image-con {
   grid-area: image-con;
@@ -232,7 +232,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1364px;
-  top: 655px;
+  top: 690px;
 }
 
 #image-wis {
@@ -250,7 +250,7 @@ grid-template-areas:
   font-size: 18px;
   font-weight: bold;
   left: 1434px;
-  top: 655px;
+  top: 690px;
 }
 
 #image-cha {

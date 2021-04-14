@@ -75,6 +75,7 @@ class NpcsAdapter{
             charisma,
             encounter_id
         }
+
         let configNpcRand = {
             method: 'POST',
             headers: {
@@ -83,15 +84,18 @@ class NpcsAdapter{
             },
             body: JSON.stringify(newNpcRand)
         }
-
+        
         fetch(this.baseUrl, configNpcRand)
         .then(res => res.json())
         .then(json => {
             let npc = new Npc(json.data.attributes)
             npc.attachToDomNpcList() 
         })
+
+        randomNpcForm.reset()
+        npcForm.reset()
     }
-    //////////////////////////////////////////////////////////////////////////////////////////////////////
+   //////////////////////////////////////////////////////////////////////////////////////////////////
 
     handleFormSubmit = (e) => {
         e.preventDefault()
@@ -144,6 +148,8 @@ class NpcsAdapter{
         })
 
         npcForm.reset()
+        randomNpcForm.reset()
+
     }
 
     // delete function
