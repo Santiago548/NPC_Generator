@@ -289,3 +289,27 @@ grid-template-areas:
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+#randomButton {
+  display: inline-block;
+  padding: 2px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: gold;
+  background-color: black;
+  border: solid;
+  border-radius: 20px;
+  box-shadow: 0 9px #999;
+}
+
+#randomButton:hover {background-color: red}
+
+#randomButton:active {
+  background-color: gold;
+  color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
