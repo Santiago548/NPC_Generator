@@ -1,6 +1,6 @@
 class Npc{
     static all = []
-
+        //deconstructoring
     constructor({name, race, sex, alignment, melee, ranged, health, armor, strength, dexterity, constitution, wisdom, charisma, id, encounter_id }){
         this.name = name
         this.race = race

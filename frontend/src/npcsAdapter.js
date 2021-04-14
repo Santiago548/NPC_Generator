@@ -114,7 +114,7 @@ class NpcsAdapter{
         const charisma = document.getElementById('npc-charisma').value
         const encounter_id = document.getElementById('encounter').value
         
-        let newNpc = {
+        const newNpc = {
             name,
             race,
             sex,
@@ -131,7 +131,7 @@ class NpcsAdapter{
             encounter_id
         }
 
-        let configNpc = {
+        const configNpc = {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -143,7 +143,7 @@ class NpcsAdapter{
         fetch(this.baseUrl, configNpc)
         .then(res => res.json())
         .then(json => {
-            let npc = new Npc(json.data.attributes)
+            const npc = new Npc(json.data.attributes)
             npc.attachToDomNpcList()
         })
 
