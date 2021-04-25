@@ -15,7 +15,7 @@ class NpcsController < ApplicationController
         if npc.save
             render json: NpcSerializer.new(npc)
         else
-            render json: {error: 'NPC could not be created'}
+            render json: {errors: 'NPC could not be created'}
         end
     end
 
