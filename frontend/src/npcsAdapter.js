@@ -1,9 +1,9 @@
-//post, patch, delete
+//get, post, destroy
 class NpcsAdapter{
     constructor(){
         this.baseUrl = 'http://localhost:3000/npcs'
     }
-
+// GET request
     fetchNpcs(){
         fetch(this.baseUrl)
         .then(res => res.json())
@@ -14,7 +14,7 @@ class NpcsAdapter{
             })
         })
     }
-//random function form submit
+//random NPC form submit
     handleRandomSubmit = (e) => {
         e.preventDefault()
 
@@ -95,8 +95,8 @@ class NpcsAdapter{
         randomNpcForm.reset()
         npcForm.reset()
     }
-   //////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //// POST request for submitting a npc from the form
     handleFormSubmit = (e) => {
         e.preventDefault()
         const name = document.getElementById('npc-name').value
@@ -137,15 +137,15 @@ class NpcsAdapter{
                 "Content-Type": "application/json",
                 Accept: "application/json"
             },
-            body: JSON.stringify(newNpc)
+            body: JSON.stringify(newNpc) // sends the key value pairs of the newNpc object as a stringified version of JSON
         }
 
-        fetch(this.baseUrl, configNpc)
-        .then(res => res.json())
+        fetch(this.baseUrl, configNpc) // 
+        .then(res => res.json()) //returns a response and convert parsing it into a Javascript object
         .then(json => {
             const npc = new Npc(json.data.attributes)
-            npc.attachToDomNpcList()
-        })
+            npc.attachToDomNpcList() // adds the newly instantiated Npc to the DOM
+        }) // return the data from the response
 
         npcForm.reset()
         randomNpcForm.reset()

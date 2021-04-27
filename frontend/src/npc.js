@@ -1,6 +1,6 @@
 class Npc{
     static all = []
-        //deconstructoring
+
     constructor({name, race, sex, alignment, melee, ranged, health, armor, strength, dexterity, constitution, wisdom, charisma, id, encounter_id }){
         this.name = name
         this.race = race
@@ -39,6 +39,16 @@ class Npc{
         return Npc.all.find(npc => npc.id == id)
     }
 
+    static npcEvil(){
+        console.log('I am evil')
+        const npcList = document.getElementById('npc-list')
+        const evil = Npc.all.filter(npc => npc.alignment == "Chaotic Evil")
+        npcList.innerHTML = ""
+        evil.forEach(i => {
+            i.attachToDomNpcList()
+        })
+    }
+
     addEventListeners(){
         this.element.addEventListener('click', this.handleListClick)
     }
@@ -47,18 +57,19 @@ class Npc{
         this.npcList.append(this.renderNpcList())
         this.addEventListeners() 
     }
+
     
     renderNpcList(){
         this.element.innerHTML = `
         <fieldset>
         <legend style="text-transform:uppercase" class="name"><b>${this.name}</b></legend>
-        The <span class="alignment">${this.alignment}</span>
+        The <span class="alignment">${this.alignment}</span><br>
         <span class="sex">${this.sex}</span>
         <span class="race">${this.race}</span><br>
         <br>
         Encounter ID:<span class='encounter_id'>${this.encounter_id}</span>
         <br>
-        HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
+        HEALTH: <span class="health">${this.health + (this.constitution * 6)} HP</span><br>
         ARMOR: <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:' + ' ' +(parseInt(this.armor.split(' ').slice(1)) + this.dexterity)}</span><br><br>
         <button class="delete" data-id="${this.id}">Delete</button>
         <button class="full-info" data-id="${this.id}">Full Info</button>
@@ -75,9 +86,9 @@ class Npc{
         <span class="sex">${this.sex}</span>
         <span class="race">${this.race}</span><br>
         <br>
-        HEALTH: <span class="health">${this.health + (this.constitution * 6)}</span><br>
+        HEALTH: <span class="health">${this.health + (this.constitution * 6)} HP</span><br>
         ARMOR:
-        <span class="armor">${this.armor.split(' ').slice(0, 1) + ' ' + 'AC:'}
+        <span class="armor">${this.armor.split(' ').slice(0, 1)}
         </span><br>
         <div id='shield-container'>
         <img id='image-shield' src='images/shield.png'>
@@ -143,6 +154,6 @@ class Npc{
            npcAdapter.deleteNpc(id)
        } else if (e.target.className === 'full-info'){
            this.displayNpc(id)
-       }
+       } 
    }
 }
