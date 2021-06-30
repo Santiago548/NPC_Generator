@@ -40,20 +40,35 @@ class Npc{
     }
 
     
+    
     static npcEvil(){
         console.log('I am evil')
         const npcList = document.getElementById('npc-list')
-        const evil = Npc.all.filter(npc => npc.alignment === "Lawful Evil" || "Neutral Evil" || "Chaotic Evil")
+        const regexp = new RegExp(/Evil/);
+        const evil = Npc.all.filter(npc => regexp.test(npc.alignment))
         npcList.innerHTML = ""
         evil.forEach(i => {
             i.attachToDomNpcList()
         })
     }
+    
+    // static npcEvil(){
+    //     console.log('I am evil')
+    //     const npcList = document.getElementById('npc-list')
+    //     const evil = Npc.all.filter(function (npc) {
+    //         return npc.alignment == "Lawful Evil" || "Chaotic Evil"
+    //     })
+    //     npcList.innerHTML = ""
+    //     evil.forEach(i => {
+    //         i.attachToDomNpcList()
+    //     })
+    // }
 
     static npcGood(){
         console.log('I am good')
         const npcList = document.getElementById('npc-list')
-        const good = Npc.all.filter(npc => npc.alignment === "Lawful Good" || "Neutral Good" || "Chaotic Good")
+        const regexp = new RegExp(/Good/);
+        const good = Npc.all.filter(npc => regexp.test(npc.alignment))
         npcList.innerHTML = ""
         good.forEach(i => {
             i.attachToDomNpcList()
