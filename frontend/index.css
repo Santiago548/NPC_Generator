@@ -1,5 +1,5 @@
 .header {
-  grid-area: header
+  grid-area: header;
 }
 .npccolumnform {
   grid-area: npcform;
@@ -78,8 +78,17 @@ fieldset {
   text-align: center;
 }
 
+.random-fieldset {
+  background-color: rgb(175, 175, 175);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: black;
+  text-align: center;
+}
+
 #column-headers {
   background-color: rgb(0, 0, 0);
+  width: 100%;
   border-radius: 8px;
   border-style: solid;
   border-color: #D4AF37;
@@ -318,6 +327,7 @@ grid-template-areas:
 
 /* button styling for alignment filters */
 .buttonAlignment {
+  width: 200px;
   display: inline-block;
   padding: 2px 15px;
   font-size: 16px;
