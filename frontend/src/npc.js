@@ -39,12 +39,23 @@ class Npc{
         return Npc.all.find(npc => npc.id == id)
     }
 
+    
     static npcEvil(){
         console.log('I am evil')
         const npcList = document.getElementById('npc-list')
-        const evil = Npc.all.filter(npc => npc.alignment == "Chaotic Evil")
+        const evil = Npc.all.filter(npc => npc.alignment === "Lawful Evil" || "Neutral Evil" || "Chaotic Evil")
         npcList.innerHTML = ""
         evil.forEach(i => {
+            i.attachToDomNpcList()
+        })
+    }
+
+    static npcGood(){
+        console.log('I am good')
+        const npcList = document.getElementById('npc-list')
+        const good = Npc.all.filter(npc => npc.alignment === "Lawful Good" || "Neutral Good" || "Chaotic Good")
+        npcList.innerHTML = ""
+        good.forEach(i => {
             i.attachToDomNpcList()
         })
     }

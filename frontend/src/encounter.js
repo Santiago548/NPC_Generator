@@ -28,6 +28,8 @@ class Encounter{
         this.encounterList.append(this.render())
         this.addEventListeners()
     }
+
+    
         
     render(){
         this.element.innerHTML = `
@@ -56,7 +58,7 @@ class Encounter{
         } else if(id == "encounter-3"){
             encounterHeader.innerHTML = 
             "<h2 id='npcs-header'>Encounter 3 NPC's</h2>"
-        }
+        } 
         return encounterHeader
     }
 }
