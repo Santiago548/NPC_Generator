@@ -9,7 +9,7 @@
   <h3 align="center">NPC Generator</h3>
 
   <p align="center">
-    Use this application to quickly create NPC's for you Dungeons & Dragons 5E Campaign. you can save up to three encounters. NPCs can be created with Random abilities and stats or you can create one picking every ability and stat to better fit your needs.
+    Use this application to quickly create NPC's for you Dungeons & Dragons 5E Campaign. you can save up to three encounters. NPCs can be created with Random abilities and stats or you can create one picking every ability and stat to better fit your needs. Upgrades coming soon!!
     <br />
     <a href="https://github.com/Santiago548/NPC_Generator"><strong>Explore the docs »</strong></a>
     <br />
